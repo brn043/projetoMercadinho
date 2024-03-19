@@ -1,14 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package conexao;
 
-/**
- *
- * @author Senai
- */
+import com.mysql.jdbc.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+
 public class Conexao {
+        private static final  String URL = "jdbc:mysql://localhost:3306/db_mercadinho";
+        private static final  String USUARIO = "root";
+        private static final  String SENHA = "";
+        
+        public static Connection conectar() throws SQLException {
+        return (Connection) DriverManager.getConnection(URL, USUARIO, SENHA);
+    }
     
 }
