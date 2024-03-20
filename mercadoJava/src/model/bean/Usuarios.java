@@ -10,20 +10,18 @@ package model.bean;
  * @author Senai
  */
 public class Usuarios {
-    private int idUsuario;
+    private static int idUsuario;
     private String nome;
     private String cpf;
-    private String login;
+    private static String login;
     private String senha;
 
     public Usuarios() {
     }
 
     public Usuarios(int idUsuario, String nome, String cpf, String login, String senha) {
-        this.idUsuario = idUsuario;
         this.nome = nome;
         this.cpf = cpf;
-        this.login = login;
         this.senha = senha;
     }
 
@@ -39,7 +37,7 @@ public class Usuarios {
         return cpf;
     }
 
-    public String getLogin() {
+    public static String getLogin() {
         return login;
     }
 
@@ -47,8 +45,8 @@ public class Usuarios {
         return senha;
     }
 
-    public void setIdUsuario(int idUsuario) {
-        this.idUsuario = idUsuario;
+    public static void setIdUsuario(int idUsuario) {
+        Usuarios.idUsuario = idUsuario;
     }
 
     public void setNome(String nome) {
@@ -59,8 +57,8 @@ public class Usuarios {
         this.cpf = cpf;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public static void setLogin(String login) {
+        Usuarios.login = login;
     }
 
     public void setSenha(String senha) {
