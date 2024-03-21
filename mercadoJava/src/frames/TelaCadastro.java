@@ -162,7 +162,9 @@ public class TelaCadastro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
-        // TODO add your handling code here:
+        TelaLogin tl = new TelaLogin();
+        this.dispose();
+        tl.setVisible(true);
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     /**
