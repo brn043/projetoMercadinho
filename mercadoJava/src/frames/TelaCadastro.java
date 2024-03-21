@@ -42,7 +42,7 @@ LoginDAO userdao = new LoginDAO();
         jLabel1 = new javax.swing.JLabel();
         inputSenha = new javax.swing.JPasswordField();
         jPanel2 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo-removebg-preview (1).png"))); // NOI18N
 
@@ -122,7 +122,7 @@ LoginDAO userdao = new LoginDAO();
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo-removebg-preview (1).png"))); // NOI18N
+        jLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo-removebg-preview (1).png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -130,14 +130,14 @@ LoginDAO userdao = new LoginDAO();
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(270, Short.MAX_VALUE)
-                .addComponent(jLabel4)
+                .addComponent(jLabel45)
                 .addGap(167, 167, 167))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(156, 156, 156)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(228, Short.MAX_VALUE))
         );
 
@@ -220,7 +220,7 @@ LoginDAO userdao = new LoginDAO();
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
