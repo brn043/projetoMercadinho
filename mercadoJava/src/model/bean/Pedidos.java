@@ -5,6 +5,8 @@
  */
 package model.bean;
 
+import java.sql.Date;
+
 /**
  *
  * @author Senai
@@ -15,16 +17,20 @@ public class Pedidos {
     private int quantidade;
     private float preco;
     private float total;
+    private Date data;
+    private int idCliente;
 
     public Pedidos() {
     }
 
-    public Pedidos(int idPedido, String produto, int quantidade, float preco, float total) {
+    public Pedidos(int idPedido, String produto, int quantidade, float preco, float total, Date data, int idCliente) {
         this.idPedido = idPedido;
         this.produto = produto;
         this.quantidade = quantidade;
         this.preco = preco;
         this.total = total;
+        this.data = data;
+        this.idCliente = idCliente;
     }
 
     public int getIdPedido() {
@@ -47,6 +53,14 @@ public class Pedidos {
         return total;
     }
 
+    public Date getData() {
+        return data;
+    }
+
+    public int getIdCliente() {
+        return idCliente;
+    }
+
     public void setIdPedido(int idPedido) {
         this.idPedido = idPedido;
     }
@@ -65,6 +79,14 @@ public class Pedidos {
 
     public void setTotal(float total) {
         this.total = total;
+    }
+
+    public void setData(Date data) {
+        this.data = data;
+    }
+
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
     }
     
 }
