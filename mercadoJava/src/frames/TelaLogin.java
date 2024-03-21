@@ -5,12 +5,19 @@
  */
 package frames;
 
+import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.DEFAULT_OPTION;
+import static javax.swing.JOptionPane.PLAIN_MESSAGE;
+import model.bean.Usuarios;
+import model.dao.LoginDAO;
+
 /**
  *
  * @author Senai
  */
 public class TelaLogin extends javax.swing.JFrame {
-
+Usuarios user = new Usuarios();
+LoginDAO userdao = new LoginDAO();
     /**
      * Creates new form NewJFrame
      */
@@ -50,7 +57,7 @@ public class TelaLogin extends javax.swing.JFrame {
         btnConfirmar.setBackground(new java.awt.Color(255, 255, 255));
         btnConfirmar.setFont(new java.awt.Font("Gadugi", 0, 11)); // NOI18N
         btnConfirmar.setText("Confirmar");
-        btnConfirmar.setBorder(new javax.swing.border.SoftBevelBorder(0));
+        btnConfirmar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnConfirmar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnConfirmar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -202,7 +209,16 @@ public class TelaLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
-        // TODO add your handling code here:
+       String login = inputUsuario.getText();
+        char[] senhaa = inputSenha.getPassword();
+        String senha = new String(senhaa);
+        if (userdao.login(login, senha)) {           
+            JOptionPane.showConfirmDialog(rootPane, "Login bem sucedido", "Login", DEFAULT_OPTION, PLAIN_MESSAGE);
+            this.dispose();
+            //new ().setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "Usuário e/ou senha inválidos!");
+        }
     }//GEN-LAST:event_btnConfirmarActionPerformed
 
     private void inputUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputUsuarioActionPerformed

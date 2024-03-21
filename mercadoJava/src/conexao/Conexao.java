@@ -5,10 +5,16 @@
  */
 package conexao;
 
+import com.mysql.jdbc.Connection;
+
 /**
  *
  * @author Senai
  */
 public class Conexao {
+
+    public static Connection conectar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

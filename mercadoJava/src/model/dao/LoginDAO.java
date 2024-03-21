@@ -15,7 +15,7 @@ public class LoginDAO {
     public List<Usuarios> read() {
         List<Usuarios> user = new ArrayList();
         try {
-            Connection conexao = (Connection) Conexao.conectar();
+            Connection conexao = Conexao.conectar();
             PreparedStatement stmt = null;
             ResultSet rs = null;
 
