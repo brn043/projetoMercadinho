@@ -5,9 +5,11 @@
  */
 package model.dao;
 
-import conexao.Conexao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import conexao.Conexao;
 import model.bean.Carrinho;
 
 /**

@@ -5,6 +5,10 @@
  */
 package frames;
 
+import javax.swing.JOptionPane;
+import model.bean.Usuarios;
+import model.dao.LoginDAO;
+
 /**
  *
  * @author Senai
@@ -202,7 +206,21 @@ public class TelaLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
-        // TODO add your handling code here:
+        Usuarios user = new Usuarios();
+        LoginDAO login = new LoginDAO();
+        
+        user.setLogin(inputUsuario.getText());
+        user.setSenha(inputSenha.getText());
+        
+        if(login.login(user)){
+            TelaAdmin ta = new TelaAdmin();
+            ta.setVisible(true);
+            this.dispose();
+        }else{
+            JOptionPane.showMessageDialog(rootPane, "Usuário e/ou senha inválidos", "Aviso", JOptionPane.ERROR_MESSAGE);
+            inputUsuario.setText("");
+            inputSenha.setText("");
+        }
     }//GEN-LAST:event_btnConfirmarActionPerformed
 
     private void inputUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputUsuarioActionPerformed
@@ -211,7 +229,7 @@ public class TelaLogin extends javax.swing.JFrame {
 
     private void entrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_entrarMouseClicked
         TelaCadastro tc = new TelaCadastro();
-
+        this.dispose();
         tc.setVisible(true);
     }//GEN-LAST:event_entrarMouseClicked
 
