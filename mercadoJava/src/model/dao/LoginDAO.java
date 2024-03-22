@@ -12,8 +12,7 @@ import javax.swing.JOptionPane;
 import model.bean.Usuarios;
 
 public class LoginDAO {
- 
-    public List<Usuarios> read() {
+    public List<Usuarios> listarUsuarios() {
         List<Usuarios> user = new ArrayList();
         try {
             Connection conexao = (Connection) Conexao.conectar();
