@@ -12,7 +12,6 @@ import javax.swing.JOptionPane;
 import model.bean.Usuarios;
 
 public class LoginDAO {
- 
     public List<Usuarios> listarUsuarios() {
         List<Usuarios> user = new ArrayList();
         try {
