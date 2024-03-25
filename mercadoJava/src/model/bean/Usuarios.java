@@ -13,13 +13,13 @@ public class Usuarios {
     private static int idUsuario;
     private String nome;
     private String cpf;
-    private String login;
+    private static String login;
     private String senha;
 
     public Usuarios() {
     }
 
-    public Usuarios(int idUsuario, String nome, String cpf, String login, String senha) {
+    public Usuarios(int idUsuario, String nome, String cpf, String senha) {
         this.nome = nome;
         this.cpf = cpf;
         this.senha = senha;
@@ -37,7 +37,7 @@ public class Usuarios {
         return cpf;
     }
 
-    public String getLogin() {
+    public static String getLogin() {
         return login;
     }
 
@@ -57,8 +57,8 @@ public class Usuarios {
         this.cpf = cpf;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public static void setLogin(String login) {
+        Usuarios.login = login;
     }
 
     public void setSenha(String senha) {

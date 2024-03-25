@@ -4,13 +4,16 @@
  * and open the template in the editor.
  */
 package frames;
-
+import javax.swing.JOptionPane;
+import model.bean.Usuarios;
+import model.dao.LoginDAO;
 /**
  *
  * @author Senai
  */
 public class TelaCadastro extends javax.swing.JFrame {
-
+Usuarios user = new Usuarios();
+LoginDAO userDAO = new LoginDAO();
     /**
      * Creates new form TelaCadastro
      */
@@ -29,7 +32,7 @@ public class TelaCadastro extends javax.swing.JFrame {
 
         jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        inputSenhaC = new javax.swing.JTextField();
+        inputLogin = new javax.swing.JTextField();
         btnCadastrar = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -83,7 +86,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
-                            .addComponent(inputSenhaC, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(inputLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel7)
                             .addComponent(inputSenha)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -104,7 +107,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(inputSenhaC))
+                    .addComponent(inputLogin))
                 .addGap(81, 81, 81)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
@@ -154,7 +157,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 693, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -162,9 +165,19 @@ public class TelaCadastro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
-        TelaLogin tl = new TelaLogin();
-        this.dispose();
-        tl.setVisible(true);
+          Usuarios.setLogin(inputLogin.getText());
+        char[] valor = inputSenha.getPassword();
+        String senha = new String(valor);
+        user.setSenha(senha);
+        if (user.getLogin().trim().equals("") || user.getSenha().trim().equals("")) {
+            JOptionPane.showMessageDialog(null, "Usuário e/ou senha inválidos!");
+             TelaLogin tl = new TelaLogin();
+            this.dispose();
+            tl.setVisible(true);
+        } else {
+            System.out.println("criar");
+            userDAO.create(user);
+        }
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     /**
@@ -204,8 +217,8 @@ public class TelaCadastro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCadastrar;
+    private javax.swing.JTextField inputLogin;
     private javax.swing.JPasswordField inputSenha;
-    private javax.swing.JTextField inputSenhaC;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
