@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 import model.bean.Pedidos;
+import model.bean.Usuarios;
 
 /**
  *
@@ -23,24 +24,25 @@ public class PedidosDAO {
 
     public List<Pedidos> listarPedidos() {
         List<Pedidos> pedidos = new ArrayList<>();
-
-        try (Connection conexao = Conexao.conectar();
-                PreparedStatement stmt = conexao.prepareStatement("SELECT * FROM produtos");
-                ResultSet rs = stmt.executeQuery()) {
-
-            while (rs.next()) {
-                Pedidos pedido = new Pedidos();
-                pedido.setIdPedido(rs.getInt("idpedido"));
-                pedido.setProduto(rs.getString("produto"));
-                pedido.setQuantidade(rs.getInt("quantidade"));
-                pedido.setPreco(rs.getFloat("preço"));
-                pedido.setTotal(rs.getFloat("total"));
-                pedidos.add(pedido);
-
+        
+        try {
+            try (Connection conexao = Conexao.conectar()) {
+                PreparedStatement stmt = conexao.prepareStatement("SELECT * FROM pedidos WHERE idcliente = ?");
+                stmt.setInt(1, Usuarios.getIdUsuario());
+                ResultSet rs = stmt.executeQuery();
+                
+                while (rs.next()) {
+                    Pedidos pedido = new Pedidos();
+                    pedido.setProduto(rs.getString("produto"));
+                    pedido.setQuantidade(rs.getInt("quantidade"));
+                    pedido.setPreco(rs.getFloat("preço"));
+                    pedido.setTotal(rs.getFloat("total"));
+                    pedido.setData(rs.getDate("data"));
+                    pedidos.add(pedido);
+                }
+                rs.close();
+                stmt.close();
             }
-            rs.close();
-            stmt.close();
-            conexao.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -54,12 +56,13 @@ public class PedidosDAO {
             Connection conexao = (Connection) Conexao.conectar();
             PreparedStatement stmt = null;
 
-            stmt = conexao.prepareStatement("INSERT INTO pedidos (produto, quantidade, preço, total, data) VALUES (?,?,?,?,?)");
+            stmt = conexao.prepareStatement("INSERT INTO pedidos (produto, quantidade, preço, total, data, idcliente) VALUES (?,?,?,?,?,?)");
             stmt.setString(1, pedido.getProduto());
             stmt.setFloat(2, pedido.getQuantidade());
             stmt.setFloat(3, pedido.getPreco());
             stmt.setFloat(4, pedido.getTotal());
             stmt.setDate(5, pedido.getData());
+            stmt.setInt(6, Usuarios.getIdUsuario());
             stmt.executeUpdate();
 
             stmt.close();

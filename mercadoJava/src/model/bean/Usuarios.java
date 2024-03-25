@@ -25,7 +25,7 @@ public class Usuarios {
         this.senha = senha;
     }
 
-    public int getIdUsuario() {
+    public static int getIdUsuario() {
         return idUsuario;
     }
 
@@ -45,7 +45,7 @@ public class Usuarios {
         return senha;
     }
 
-    public static void setIdUsuario(int idUsuario) {
+    public void setIdUsuario(int idUsuario) {
         Usuarios.idUsuario = idUsuario;
     }
 

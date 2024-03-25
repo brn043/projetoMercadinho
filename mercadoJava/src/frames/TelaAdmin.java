@@ -83,18 +83,7 @@ public class TelaAdmin extends javax.swing.JFrame {
         jTable1.setForeground(new java.awt.Color(204, 255, 204));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"12", "oi", null, null},
-                {"13", "io", null, null},
-                {"14", "oio", null, null},
-                {"15", "ioi", null, null},
-                {"16", "oiio", null, null},
-                {"17", "iioii", null, null},
-                {"18", "oiiio", null, null},
-                {"19", "iiioiii", null, null},
-                {"120", "oiiiio", null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "ID", "Nome", "Categoria", "Preço"

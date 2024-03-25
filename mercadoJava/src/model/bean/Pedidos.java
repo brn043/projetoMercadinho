@@ -16,7 +16,7 @@ public class Pedidos {
     private String produto;
     private int quantidade;
     private float preco;
-    private float total;
+    private float total = preco * quantidade;
     private Date data;
     private int idCliente;
 

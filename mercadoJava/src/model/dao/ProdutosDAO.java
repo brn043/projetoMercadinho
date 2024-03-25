@@ -33,6 +33,8 @@ public class ProdutosDAO {
                 produto.setIdProduto(rs.getInt("idprodutos"));
                 produto.setNome(rs.getString("nome"));
                 produto.setCategoria(rs.getString("categoria"));
+                produto.setPreco(rs.getFloat("preço"));
+                produto.setQuantidade(rs.getInt("quantidade"));
                 produtos.add(produto);
 
             }
@@ -52,10 +54,11 @@ public class ProdutosDAO {
             Connection conexao = (Connection) Conexao.conectar();
             PreparedStatement stmt = null;
 
-            stmt = conexao.prepareStatement("INSERT INTO produtos (nome, categoria, preço) VALUES (?,?,?)");
+            stmt = conexao.prepareStatement("INSERT INTO produtos (nome, categoria, preço, quantidade) VALUES (?,?,?,?)");
             stmt.setString(1, produto.getNome());
-            stmt.setString(1, produto.getCategoria());
-            stmt.setDouble(1, produto.getPreco());
+            stmt.setString(2, produto.getCategoria());
+            stmt.setFloat(3, produto.getPreco());
+            stmt.setInt(4, produto.getQuantidade());
             stmt.executeUpdate();
 
             stmt.close();

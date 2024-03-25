@@ -15,7 +15,7 @@ public class Carrinho {
    private int quantidade;
    private float preco;
    private int idCliente;
-   private float total;
+   private float total = preco * quantidade;
 
     public Carrinho() {
     }

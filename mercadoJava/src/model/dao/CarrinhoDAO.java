@@ -11,6 +11,7 @@ import java.sql.SQLException;
 
 import conexao.Conexao;
 import model.bean.Carrinho;
+import model.bean.Usuarios;
 
 /**
  *
@@ -24,19 +25,38 @@ public class CarrinhoDAO {
             Connection conexao = (Connection) Conexao.conectar();
             PreparedStatement stmt = null;
 
-            stmt = conexao.prepareStatement("INSERT INTO compras (produto, quantidade, preço, total, data) VALUES (?,?,?,?,?)");
+            stmt = conexao.prepareStatement("INSERT INTO carrinho (produto, quantidade, preço, total, idCliente) VALUES (?,?,?,?,?)");
             stmt.setString(1, carrinho.getProduto());
             stmt.setFloat(2, carrinho.getQuantidade());
             stmt.setFloat(3, carrinho.getPreco());
             stmt.setFloat(4, carrinho.getTotal());
-            stmt.setInt(6, carrinho.getIdCliente());
+            stmt.setInt(5, carrinho.getIdCliente());
             stmt.executeUpdate();
+
+            System.out.println("produto adicionado ao carrinho");
 
             stmt.close();
             conexao.close();
         } catch (SQLException e) {
             e.printStackTrace();
-            System.out.println("novo pedido criado");
+        }
+    }
+
+    public void limparCarrinho(Carrinho carrinho) {
+        try {
+            Connection conexao = (Connection) Conexao.conectar();
+            PreparedStatement stmt = null;
+
+            stmt = conexao.prepareStatement("DELETE FROM carrinho WHERE idCliente = ?");
+            stmt.setInt(1, Usuarios.getIdUsuario());
+            stmt.executeUpdate();
+
+            System.out.println("carrinho limpo!");
+
+            stmt.close();
+            conexao.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
