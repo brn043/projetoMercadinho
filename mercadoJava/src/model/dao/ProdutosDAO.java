@@ -75,8 +75,8 @@ public class ProdutosDAO {
             Connection conexao = (Connection) Conexao.conectar();
             PreparedStatement stmt = null;
 
-            stmt = conexao.prepareStatement("DELETE FROM produtos WHERE (nome) VALUES (?)");
-            stmt.setString(1, produto.getNome());
+            stmt = conexao.prepareStatement("DELETE FROM produtos WHERE idprodutos = ?");
+            stmt.setInt(1, produto.getIdProduto());
             stmt.executeUpdate();
 
             stmt.close();
