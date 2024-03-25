@@ -30,7 +30,7 @@ Produtos produtoAtual = new Produtos();
                      int idAtual = (int) tabelaAdmin.getValueAt(linhaSelecionada,0);
                      String nomeAtual = (String) tabelaAdmin.getValueAt(linhaSelecionada,1);
                      String categoriaAtual = (String) tabelaAdmin.getValueAt(linhaSelecionada,2);
-                     double precoAtual = (double) tabelaAdmin.getValueAt(linhaSelecionada,3);
+                     float precoAtual = (float) tabelaAdmin.getValueAt(linhaSelecionada,3);
                      int quantidadeAtual = (int) tabelaAdmin.getValueAt(linhaSelecionada,4);
                      
                        System.out.println(idAtual+" "+nomeAtual+" "+categoriaAtual+" "+precoAtual);
@@ -81,7 +81,7 @@ public void readJTable(){
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelaAdmin = new javax.swing.JTable();
         inputCategoria = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        inputPreco = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -207,7 +207,7 @@ public void readJTable(){
                                     .addComponent(jLabel9))
                                 .addGap(24, 24, 24)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(inputPreco, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(inputCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(172, 172, 172)
@@ -243,12 +243,12 @@ public void readJTable(){
                         .addGap(65, 65, 65)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(inputPreco, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(inputNome, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel7)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 157, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnDeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -279,11 +279,36 @@ public void readJTable(){
     }//GEN-LAST:event_btnDeslogarActionPerformed
 
     private void btnInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirActionPerformed
-      
+     /*   ProdutosDAO dao = new ProdutosDAO();
+       
+        produtoAtual.setNome(inputNome.getText());
+        produtoAtual.setCategoria(inputCategoria.getText());
+        produtoAtual.setPreco(Float.parseFloat(inputPreco.getText()));
+        //produtoAtual.setQuantidades(Integer.parseInt(inputQuantidade.getText()));
+        if(biblioteca.getAutor().trim().equals("") ||biblioteca.getNomeLivro().trim().equals("")
+         ||biblioteca.getCategoria().trim().equals("")||biblioteca.getEditora().trim().equals("")||biblioteca.getEdicao().trim().equals("")){
+            JOptionPane.showMessageDialog(null,"Insira Todos os Dados!");
+        }else{
+           dao.adicionarProduto(biblioteca);  
+        }
+          readJTable(); */
     }//GEN-LAST:event_btnInserirActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-      
+       ProdutosDAO dao = new ProdutosDAO();
+       
+       produtoAtual.setNome(inputNome.getText());
+       produtoAtual.setCategoria(inputCategoria.getText());
+       produtoAtual.setPreco(Float.parseFloat(inputPreco.getText()));
+       //produtoAtual.setQuantidade(Integer.parseInt(inputQuantidade.getText()));
+       
+       
+       if (produtoAtual.getNome().trim().equals("") ||produtoAtual.getCategoria().trim().equals("") ){
+           JOptionPane.showMessageDialog(null,"Insira Todos os Dados!");
+       }else{
+        //   dao.editaProduto(produtoAtual);
+       }
+       readJTable();
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void btnDeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeletarActionPerformed
@@ -341,6 +366,7 @@ public void readJTable(){
     private javax.swing.JTextField inputCategoria;
     private javax.swing.JTextField inputId;
     private javax.swing.JTextField inputNome;
+    private javax.swing.JTextField inputPreco;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
@@ -348,7 +374,6 @@ public void readJTable(){
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JTable tabelaAdmin;
     // End of variables declaration//GEN-END:variables
 }
