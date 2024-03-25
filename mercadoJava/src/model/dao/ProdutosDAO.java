@@ -90,4 +90,25 @@ public class ProdutosDAO {
             e.printStackTrace();
         }
     }
+     public void editarProduto (Produtos produto){
+          
+         try {
+            Connection conexao = (Connection) Conexao.conectar();
+            PreparedStatement stmt = null;
+
+            stmt = conexao.prepareStatement("UPDATE produtos SET nome =?, categoria =?, preço=?, quantidade =? WHERE idprodutos =?");
+            stmt.setString(1, produto.getNome());
+            stmt.setString(2, produto.getCategoria());
+            stmt.setFloat(3, produto.getPreco());
+            stmt.setInt(4, produto.getQuantidade());
+            stmt.setInt(5, produto.getIdProduto());;
+            stmt.executeUpdate();
+
+            stmt.close();
+            conexao.close();
+            JOptionPane.showMessageDialog(null, "Produto Editado com sucesso!");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+     }
 }

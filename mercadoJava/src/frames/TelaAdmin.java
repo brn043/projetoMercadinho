@@ -38,7 +38,7 @@ Produtos produtoAtual = new Produtos();
                        produtoAtual.setNome(nomeAtual);
                        produtoAtual.setCategoria(categoriaAtual);      
                        produtoAtual.setPreco(precoAtual);
-                       //produtoAtual.setQuantidade(quantidadeAtual);
+                       produtoAtual.setQuantidade(quantidadeAtual);
                    }
                 }
             }
@@ -60,7 +60,7 @@ public void readJTable(){
           c.getNome(),
           c.getCategoria(),
           c.getPreco(),
-          //c.getQuantidade(),
+          c.getQuantidade(),
         });           
     }    
     }
@@ -86,8 +86,8 @@ public void readJTable(){
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        inputQuantidade = new javax.swing.JTextField();
         inputNome = new javax.swing.JTextField();
-        inputId = new javax.swing.JTextField();
         btnDeslogar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -143,11 +143,11 @@ public void readJTable(){
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 51));
-        jLabel1.setText("ID:");
+        jLabel1.setText("Nome:");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 102, 51));
-        jLabel7.setText("Nome:");
+        jLabel7.setText("Quantidade:");
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 102, 51));
@@ -175,14 +175,17 @@ public void readJTable(){
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(39, 39, 39)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel1))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(78, 78, 78)
+                                        .addComponent(jLabel1))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                        .addGap(39, 39, 39)
+                                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(36, 36, 36)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(inputId, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(inputNome, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(inputNome, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(inputQuantidade, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(151, 151, 151)
                                 .addComponent(btnInserir, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -227,7 +230,7 @@ public void readJTable(){
                         .addGap(72, 72, 72))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(inputId, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(inputNome, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1))
                         .addGap(65, 65, 65)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -235,7 +238,7 @@ public void readJTable(){
                         .addComponent(inputPreco, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(inputNome, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(inputQuantidade, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel7)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 157, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -268,34 +271,33 @@ public void readJTable(){
     }//GEN-LAST:event_btnDeslogarActionPerformed
 
     private void btnInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirActionPerformed
-     /*   ProdutosDAO dao = new ProdutosDAO();
+        ProdutosDAO dao = new ProdutosDAO();
        
-        produtoAtual.setNome(inputNome.getText());
+        produtoAtual.setNome(inputQuantidade.getText());
         produtoAtual.setCategoria(inputCategoria.getText());
         produtoAtual.setPreco(Float.parseFloat(inputPreco.getText()));
-        //produtoAtual.setQuantidades(Integer.parseInt(inputQuantidade.getText()));
-        if(biblioteca.getAutor().trim().equals("") ||biblioteca.getNomeLivro().trim().equals("")
-         ||biblioteca.getCategoria().trim().equals("")||biblioteca.getEditora().trim().equals("")||biblioteca.getEdicao().trim().equals("")){
+        produtoAtual.setQuantidade(Integer.parseInt(inputNome.getText()));
+        if(produtoAtual.getNome().trim().equals("") || produtoAtual.getCategoria().trim().equals("")){
             JOptionPane.showMessageDialog(null,"Insira Todos os Dados!");
         }else{
-           dao.adicionarProduto(biblioteca);  
+           dao.adicionarProduto( produtoAtual);  
         }
-          readJTable(); */
+          readJTable(); 
     }//GEN-LAST:event_btnInserirActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
        ProdutosDAO dao = new ProdutosDAO();
        
-       produtoAtual.setNome(inputNome.getText());
+       produtoAtual.setNome(inputQuantidade.getText());
        produtoAtual.setCategoria(inputCategoria.getText());
        produtoAtual.setPreco(Float.parseFloat(inputPreco.getText()));
-       //produtoAtual.setQuantidade(Integer.parseInt(inputQuantidade.getText()));
+       produtoAtual.setQuantidade(Integer.parseInt(inputNome.getText()));
        
        
        if (produtoAtual.getNome().trim().equals("") ||produtoAtual.getCategoria().trim().equals("") ){
            JOptionPane.showMessageDialog(null,"Insira Todos os Dados!");
        }else{
-        //   dao.editaProduto(produtoAtual);
+           dao.editarProduto(produtoAtual);
        }
        readJTable();
     }//GEN-LAST:event_btnEditarActionPerformed
@@ -353,9 +355,9 @@ public void readJTable(){
     private javax.swing.JToggleButton btnEditar;
     private javax.swing.JToggleButton btnInserir;
     private javax.swing.JTextField inputCategoria;
-    private javax.swing.JTextField inputId;
     private javax.swing.JTextField inputNome;
     private javax.swing.JTextField inputPreco;
+    private javax.swing.JTextField inputQuantidade;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
