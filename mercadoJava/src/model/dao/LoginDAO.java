@@ -53,7 +53,7 @@ public class LoginDAO {
             stmt = conexao.prepareStatement("INSERT INTO usuarios (nome, cpf, login, senha) VALUES (?,?,?,?)");
             stmt.setString(1, createLogin.getNome());
             stmt.setString(2, createLogin.getCpf());
-            stmt.setString(3, createLogin.getLogin());
+            stmt.setString(3, Usuarios.getLogin());
             stmt.setString(4, createLogin.getSenha());
             stmt.executeUpdate();
 
@@ -66,7 +66,7 @@ public class LoginDAO {
 
     }
 
-    public Boolean login(Usuarios user) {
+    public Boolean login(String login, String senha) {
         Boolean validar = false;
         try {
             Connection conexao = (Connection) Conexao.conectar();
@@ -74,8 +74,8 @@ public class LoginDAO {
             ResultSet rs = null;
 
             stmt = conexao.prepareStatement("SELECT * FROM usuarios WHERE login = ? AND senha = ?");
-            stmt.setString(1, user.getLogin());
-            stmt.setString(2, user.getSenha());
+            stmt.setString(1, login);
+            stmt.setString(2, senha);
             rs = stmt.executeQuery();
 
             if (rs.next()) {
