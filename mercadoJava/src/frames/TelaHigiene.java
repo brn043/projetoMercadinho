@@ -9,12 +9,12 @@ package frames;
  *
  * @author Senai
  */
-public class Higiene extends javax.swing.JFrame {
+public class TelaHigiene extends javax.swing.JFrame {
 
     /**
      * Creates new form Higiene
      */
-    public Higiene() {
+    public TelaHigiene() {
         initComponents();
     }
 
@@ -843,38 +843,38 @@ public class Higiene extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel135MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel135MouseClicked
-        Bebidas b = new Bebidas();
+        TelaBebidas b = new TelaBebidas();
         this.dispose();
         b.setVisible(true);
     }//GEN-LAST:event_jLabel135MouseClicked
 
     private void jLabel148MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel148MouseClicked
-        Carnes c = new Carnes();
+        TelaCarnes c = new TelaCarnes();
         this.dispose();
         c.setVisible(true);
     }//GEN-LAST:event_jLabel148MouseClicked
 
     private void jLabel134MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel134MouseClicked
-        Produtos p = new Produtos();
+        TelaProdutos p = new TelaProdutos();
     this.dispose();
     p.setVisible(true);
     
     }//GEN-LAST:event_jLabel134MouseClicked
 
     private void jLabel150MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel150MouseClicked
-         Hortifruti ho = new Hortifruti();
+         TelaHortifruti ho = new TelaHortifruti();
         this.dispose();
         ho.setVisible(true);
     }//GEN-LAST:event_jLabel150MouseClicked
 
     private void jLabel151MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel151MouseClicked
-         Padaria pa = new Padaria();
+         TelaPadaria pa = new TelaPadaria();
        this.dispose();
        pa.setVisible(true);
     }//GEN-LAST:event_jLabel151MouseClicked
 
     private void jLabel152MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel152MouseClicked
-          Ofertas o = new Ofertas();
+          TelaOfertas o = new TelaOfertas();
        this.dispose();
        o.setVisible(true);
     }//GEN-LAST:event_jLabel152MouseClicked
@@ -896,7 +896,7 @@ public class Higiene extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Carrinho c = new Carrinho();
+        TelaCarrinho c = new TelaCarrinho();
         this.dispose();
         c.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -930,20 +930,21 @@ public class Higiene extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Higiene.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaHigiene.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Higiene.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaHigiene.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Higiene.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaHigiene.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Higiene.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaHigiene.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Higiene().setVisible(true);
+                new TelaHigiene().setVisible(true);
             }
         });
     }

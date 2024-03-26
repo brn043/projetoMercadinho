@@ -9,12 +9,12 @@ package frames;
  *
  * @author Senai
  */
-public class Bebidas extends javax.swing.JFrame {
+public class TelaBebidas extends javax.swing.JFrame {
 
     /**
      * Creates new form Bebidas
      */
-    public Bebidas() {
+    public TelaBebidas() {
         initComponents();
     }
 
@@ -922,50 +922,50 @@ public class Bebidas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
-        Bebidas b = new Bebidas();
+        TelaBebidas b = new TelaBebidas();
         this.dispose();
         b.setVisible(true);
     }//GEN-LAST:event_jLabel13MouseClicked
 
     private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
-        Bebidas b = new Bebidas();
+        TelaBebidas b = new TelaBebidas();
         this.dispose();
         b.setVisible(true);
     }//GEN-LAST:event_jLabel20MouseClicked
 
     private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
-    Produtos p = new Produtos();
+    TelaProdutos p = new TelaProdutos();
     this.dispose();
     p.setVisible(true);
     
     }//GEN-LAST:event_jLabel19MouseClicked
 
     private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
-     Carnes c = new Carnes();
+     TelaCarnes c = new TelaCarnes();
         this.dispose();
         c.setVisible(true);
     }//GEN-LAST:event_jLabel21MouseClicked
 
     private void jLabel22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel22MouseClicked
-        Higiene h = new Higiene();
+        TelaHigiene h = new TelaHigiene();
        this.dispose();
        h.setVisible(true);
     }//GEN-LAST:event_jLabel22MouseClicked
 
     private void jLabel23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel23MouseClicked
-         Hortifruti ho = new Hortifruti();
+         TelaHortifruti ho = new TelaHortifruti();
         this.dispose();
         ho.setVisible(true);
     }//GEN-LAST:event_jLabel23MouseClicked
 
     private void jLabel24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel24MouseClicked
-         Padaria pa = new Padaria();
+         TelaPadaria pa = new TelaPadaria();
        this.dispose();
        pa.setVisible(true);
     }//GEN-LAST:event_jLabel24MouseClicked
 
     private void jLabel25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel25MouseClicked
-         Ofertas o = new Ofertas();
+         TelaOfertas o = new TelaOfertas();
        this.dispose();
        o.setVisible(true);
     }//GEN-LAST:event_jLabel25MouseClicked
@@ -983,7 +983,7 @@ public class Bebidas extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Carrinho c = new Carrinho();
+        TelaCarrinho c = new TelaCarrinho();
         this.dispose();
         c.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -1021,20 +1021,21 @@ public class Bebidas extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Bebidas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaBebidas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Bebidas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaBebidas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Bebidas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaBebidas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Bebidas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaBebidas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Bebidas().setVisible(true);
+                new TelaBebidas().setVisible(true);
             }
         });
     }
