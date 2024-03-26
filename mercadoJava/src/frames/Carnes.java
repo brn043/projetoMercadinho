@@ -845,7 +845,7 @@ public class Carnes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
-        Produtos p = new Produtos();
+        TelaProdutos p = new TelaProdutos();
         this.dispose();
         p.setVisible(true);
 
@@ -886,7 +886,7 @@ public class Carnes extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Carrinho c = new Carrinho();
+        TelaCarrinho c = new TelaCarrinho();
         this.dispose();
         c.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed

@@ -254,7 +254,7 @@ public class Ofertas extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel10MouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-         Produtos p = new Produtos();
+         TelaProdutos p = new TelaProdutos();
         this.dispose();
         p.setVisible(true);
     }//GEN-LAST:event_jLabel5MouseClicked

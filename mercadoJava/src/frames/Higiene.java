@@ -855,7 +855,7 @@ public class Higiene extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel148MouseClicked
 
     private void jLabel134MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel134MouseClicked
-        Produtos p = new Produtos();
+        TelaProdutos p = new TelaProdutos();
     this.dispose();
     p.setVisible(true);
     
@@ -896,7 +896,7 @@ public class Higiene extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Carrinho c = new Carrinho();
+        TelaCarrinho c = new TelaCarrinho();
         this.dispose();
         c.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed

@@ -187,14 +187,18 @@ LoginDAO userdao = new LoginDAO();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
-        /*  String login = inputUsuario.getText();
+        String login = inputUsuario.getText();
         char[] senhaa = inputSenha.getPassword();
         String senha = new String(senhaa);
         if (userdao.login(login, senha)) {                   
             JOptionPane.showConfirmDialog(rootPane, "Login bem sucedido", "Login", DEFAULT_OPTION, PLAIN_MESSAGE);
+            TelaProdutos tp = new TelaProdutos();
+            this.dispose();
+            tp.setVisible(true);
+            System.out.println("ID ATUAL: " + Usuarios.getIdUsuario());
         } else {
             JOptionPane.showMessageDialog(null, "Usuário e/ou senha inválidos!");
-        }*/
+        }
     }//GEN-LAST:event_btnConfirmarActionPerformed
 
     private void inputUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputUsuarioActionPerformed

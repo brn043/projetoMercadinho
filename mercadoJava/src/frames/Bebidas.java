@@ -5,15 +5,20 @@
  */
 package frames;
 
+import javax.swing.JOptionPane;
+import model.bean.Carrinho;
+import model.bean.Usuarios;
+import model.dao.CarrinhoDAO;
+
 /**
  *
  * @author Senai
  */
 public class Bebidas extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Bebidas
-     */
+    Carrinho produto = new Carrinho();
+    CarrinhoDAO carrinhodao = new CarrinhoDAO();
+
     public Bebidas() {
         initComponents();
     }
@@ -56,49 +61,49 @@ public class Bebidas extends javax.swing.JFrame {
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
         jPanel21 = new javax.swing.JPanel();
-        jButton9 = new javax.swing.JButton();
+        addSukitaUva = new javax.swing.JButton();
         jLabel41 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
+        addTubaina = new javax.swing.JButton();
         jLabel28 = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
         jPanel15 = new javax.swing.JPanel();
-        jButton6 = new javax.swing.JButton();
+        addGoldLabel = new javax.swing.JButton();
         jLabel32 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        addFanta = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
         jPanel19 = new javax.swing.JPanel();
-        jButton8 = new javax.swing.JButton();
+        addGuaranaJesus = new javax.swing.JButton();
         jLabel38 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
         jPanel12 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
+        addCoca = new javax.swing.JButton();
         jLabel35 = new javax.swing.JLabel();
         jPanel13 = new javax.swing.JPanel();
         jLabel42 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
         jPanel16 = new javax.swing.JPanel();
-        jButton5 = new javax.swing.JButton();
+        addPepsi = new javax.swing.JButton();
         jLabel44 = new javax.swing.JLabel();
         jPanel17 = new javax.swing.JPanel();
         jLabel45 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
         jPanel22 = new javax.swing.JPanel();
-        jButton7 = new javax.swing.JButton();
+        addSucoPrats = new javax.swing.JButton();
         jLabel47 = new javax.swing.JLabel();
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/groceries (2).png"))); // NOI18N
@@ -331,10 +336,10 @@ public class Bebidas extends javax.swing.JFrame {
 
         jPanel21.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton9.setText("Adicionar");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        addSukitaUva.setText("Adicionar");
+        addSukitaUva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                addSukitaUvaActionPerformed(evt);
             }
         });
 
@@ -344,14 +349,14 @@ public class Bebidas extends javax.swing.JFrame {
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel21Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addComponent(jButton9)
+                .addComponent(addSukitaUva)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel21Layout.setVerticalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel21Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton9)
+                .addComponent(addSukitaUva)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -399,10 +404,10 @@ public class Bebidas extends javax.swing.JFrame {
 
         jPanel11.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton4.setText("Adicionar");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        addTubaina.setText("Adicionar");
+        addTubaina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                addTubainaActionPerformed(evt);
             }
         });
 
@@ -412,14 +417,14 @@ public class Bebidas extends javax.swing.JFrame {
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addGap(66, 66, 66)
-                .addComponent(jButton4)
+                .addComponent(addTubaina)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton4)
+                .addComponent(addTubaina)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -461,16 +466,16 @@ public class Bebidas extends javax.swing.JFrame {
         jPanel14.setBorder(javax.swing.BorderFactory.createCompoundBorder());
 
         jLabel30.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel30.setText("Coca Cola 2 Litros");
+        jLabel30.setText("Gold Label 1 Litro");
 
         jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bebidas/goold lable_resized.jpg"))); // NOI18N
 
         jPanel15.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton6.setText("Adicionar");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        addGoldLabel.setText("Adicionar");
+        addGoldLabel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                addGoldLabelActionPerformed(evt);
             }
         });
 
@@ -480,19 +485,19 @@ public class Bebidas extends javax.swing.JFrame {
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton6)
+                .addComponent(addGoldLabel)
                 .addGap(63, 63, 63))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton6)
+                .addComponent(addGoldLabel)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
         jLabel32.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel32.setText("10,90R$");
+        jLabel32.setText("215,50R$");
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -537,10 +542,10 @@ public class Bebidas extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton1.setText("Adicionar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        addFanta.setText("Adicionar");
+        addFanta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                addFantaActionPerformed(evt);
             }
         });
 
@@ -550,14 +555,14 @@ public class Bebidas extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(81, 81, 81)
-                .addComponent(jButton1)
+                .addComponent(addFanta)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(addFanta)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -602,10 +607,10 @@ public class Bebidas extends javax.swing.JFrame {
 
         jPanel19.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton8.setText("Adicionar");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        addGuaranaJesus.setText("Adicionar");
+        addGuaranaJesus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                addGuaranaJesusActionPerformed(evt);
             }
         });
 
@@ -615,14 +620,14 @@ public class Bebidas extends javax.swing.JFrame {
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
                 .addGap(76, 76, 76)
-                .addComponent(jButton8)
+                .addComponent(addGuaranaJesus)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel19Layout.setVerticalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton8)
+                .addComponent(addGuaranaJesus)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -670,10 +675,10 @@ public class Bebidas extends javax.swing.JFrame {
 
         jPanel12.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton3.setText("Adicionar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        addCoca.setText("Adicionar");
+        addCoca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                addCocaActionPerformed(evt);
             }
         });
 
@@ -683,14 +688,14 @@ public class Bebidas extends javax.swing.JFrame {
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addGap(82, 82, 82)
-                .addComponent(jButton3)
+                .addComponent(addCoca)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton3)
+                .addComponent(addCoca)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -738,10 +743,10 @@ public class Bebidas extends javax.swing.JFrame {
 
         jPanel16.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton5.setText("Adicionar");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        addPepsi.setText("Adicionar");
+        addPepsi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                addPepsiActionPerformed(evt);
             }
         });
 
@@ -751,14 +756,14 @@ public class Bebidas extends javax.swing.JFrame {
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addComponent(jButton5)
+                .addComponent(addPepsi)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton5)
+                .addComponent(addPepsi)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -802,10 +807,10 @@ public class Bebidas extends javax.swing.JFrame {
 
         jPanel22.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton7.setText("Adicionar");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        addSucoPrats.setText("Adicionar");
+        addSucoPrats.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                addSucoPratsActionPerformed(evt);
             }
         });
 
@@ -815,14 +820,14 @@ public class Bebidas extends javax.swing.JFrame {
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel22Layout.createSequentialGroup()
                 .addGap(80, 80, 80)
-                .addComponent(jButton7)
+                .addComponent(addSucoPrats)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel22Layout.setVerticalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel22Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton7)
+                .addComponent(addSucoPrats)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -894,7 +899,7 @@ public class Bebidas extends javax.swing.JFrame {
                         .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -934,75 +939,118 @@ public class Bebidas extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel20MouseClicked
 
     private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
-    Produtos p = new Produtos();
-    this.dispose();
-    p.setVisible(true);
-    
+        TelaProdutos p = new TelaProdutos();
+        this.dispose();
+        p.setVisible(true);
+
     }//GEN-LAST:event_jLabel19MouseClicked
 
     private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
-     Carnes c = new Carnes();
+        Carnes c = new Carnes();
         this.dispose();
         c.setVisible(true);
     }//GEN-LAST:event_jLabel21MouseClicked
 
     private void jLabel22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel22MouseClicked
         Higiene h = new Higiene();
-       this.dispose();
-       h.setVisible(true);
+        this.dispose();
+        h.setVisible(true);
     }//GEN-LAST:event_jLabel22MouseClicked
 
     private void jLabel23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel23MouseClicked
-         Hortifruti ho = new Hortifruti();
+        Hortifruti ho = new Hortifruti();
         this.dispose();
         ho.setVisible(true);
     }//GEN-LAST:event_jLabel23MouseClicked
 
     private void jLabel24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel24MouseClicked
-         Padaria pa = new Padaria();
-       this.dispose();
-       pa.setVisible(true);
+        Padaria pa = new Padaria();
+        this.dispose();
+        pa.setVisible(true);
     }//GEN-LAST:event_jLabel24MouseClicked
 
     private void jLabel25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel25MouseClicked
-         Ofertas o = new Ofertas();
-       this.dispose();
-       o.setVisible(true);
+        Ofertas o = new Ofertas();
+        this.dispose();
+        o.setVisible(true);
     }//GEN-LAST:event_jLabel25MouseClicked
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+    private void addSukitaUvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addSukitaUvaActionPerformed
+        try {
+            produto.setProduto("Sukita Uva");
+            produto.setQuantidade(Integer.parseInt("1"));
+            produto.setPreco(Float.parseFloat("10.00"));
+            produto.setTotal(produto.getPreco() * produto.getQuantidade());
+            produto.setIdCliente(Usuarios.getIdUsuario());
+            carrinhodao.adicionarAoCarrinho(produto);
+            JOptionPane.showMessageDialog(null, "Produto adicionado ao carrinho");
+        } catch (Exception e) {
+            System.out.println("Erro=" + e);
+        }
+    }//GEN-LAST:event_addSukitaUvaActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void addTubainaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTubainaActionPerformed
+        produto.setProduto("Coca-Cola");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("5.60"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        produto.setIdCliente(Usuarios.getIdUsuario());
+        carrinhodao.adicionarAoCarrinho(produto);
+    }//GEN-LAST:event_addTubainaActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    private void addGoldLabelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addGoldLabelActionPerformed
+        produto.setProduto("Gold Label 1L");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("215.50"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        produto.setIdCliente(Usuarios.getIdUsuario());
+        carrinhodao.adicionarAoCarrinho(produto);
+    }//GEN-LAST:event_addGoldLabelActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Carrinho c = new Carrinho();
-        this.dispose();
-        c.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void addFantaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addFantaActionPerformed
+        produto.setProduto("Fanta Laranja 2L");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("7.80"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        produto.setIdCliente(Usuarios.getIdUsuario());
+        carrinhodao.adicionarAoCarrinho(produto);
+    }//GEN-LAST:event_addFantaActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    private void addGuaranaJesusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addGuaranaJesusActionPerformed
+        produto.setProduto("Guarana Jesus 450ml");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("15.00"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        produto.setIdCliente(Usuarios.getIdUsuario());
+        carrinhodao.adicionarAoCarrinho(produto);
+    }//GEN-LAST:event_addGuaranaJesusActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void addCocaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCocaActionPerformed
+        produto.setProduto("Coca-Cola 2L");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("11.90"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        produto.setIdCliente(Usuarios.getIdUsuario());
+        carrinhodao.adicionarAoCarrinho(produto);
+    }//GEN-LAST:event_addCocaActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void addPepsiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPepsiActionPerformed
+        produto.setProduto("Pepsi 2L");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("8.80"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        produto.setIdCliente(Usuarios.getIdUsuario());
+        carrinhodao.adicionarAoCarrinho(produto);
+    }//GEN-LAST:event_addPepsiActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    private void addSucoPratsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addSucoPratsActionPerformed
+        produto.setProduto("Suco Prats 4L");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("16.20"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        produto.setIdCliente(Usuarios.getIdUsuario());
+        carrinhodao.adicionarAoCarrinho(produto);
+    }//GEN-LAST:event_addSucoPratsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1040,14 +1088,14 @@ public class Bebidas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton addCoca;
+    private javax.swing.JButton addFanta;
+    private javax.swing.JButton addGoldLabel;
+    private javax.swing.JButton addGuaranaJesus;
+    private javax.swing.JButton addPepsi;
+    private javax.swing.JButton addSucoPrats;
+    private javax.swing.JButton addSukitaUva;
+    private javax.swing.JButton addTubaina;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
