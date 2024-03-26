@@ -47,49 +47,49 @@ public class TelaHortifruti extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
+        addMaca = new javax.swing.JButton();
         jLabel25 = new javax.swing.JLabel();
         jPanel12 = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         jPanel13 = new javax.swing.JPanel();
-        jButton5 = new javax.swing.JButton();
+        addTomate = new javax.swing.JButton();
         jLabel29 = new javax.swing.JLabel();
         jPanel16 = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
         jPanel17 = new javax.swing.JPanel();
-        jButton7 = new javax.swing.JButton();
+        addAbacaxi = new javax.swing.JButton();
         jLabel35 = new javax.swing.JLabel();
         jPanel20 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
         jPanel21 = new javax.swing.JPanel();
-        jButton9 = new javax.swing.JButton();
+        addCenora = new javax.swing.JButton();
         jLabel41 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        addBanana = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
+        addAlface = new javax.swing.JButton();
         jLabel31 = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
         jLabel32 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
         jPanel15 = new javax.swing.JPanel();
-        jButton6 = new javax.swing.JButton();
+        addBatataDoce = new javax.swing.JButton();
         jLabel37 = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
         jLabel38 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
         jPanel19 = new javax.swing.JPanel();
-        jButton8 = new javax.swing.JButton();
+        addMorango = new javax.swing.JButton();
         jLabel43 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -254,10 +254,10 @@ public class TelaHortifruti extends javax.swing.JFrame {
 
         jPanel9.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton3.setText("Adicionar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        addMaca.setText("Adicionar");
+        addMaca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                addMacaActionPerformed(evt);
             }
         });
 
@@ -267,14 +267,14 @@ public class TelaHortifruti extends javax.swing.JFrame {
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addComponent(jButton3)
+                .addComponent(addMaca)
                 .addContainerGap(69, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton3)
+                .addComponent(addMaca)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -325,10 +325,10 @@ public class TelaHortifruti extends javax.swing.JFrame {
 
         jPanel13.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton5.setText("Adicionar");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        addTomate.setText("Adicionar");
+        addTomate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                addTomateActionPerformed(evt);
             }
         });
 
@@ -338,14 +338,14 @@ public class TelaHortifruti extends javax.swing.JFrame {
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addComponent(jButton5)
+                .addComponent(addTomate)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton5)
+                .addComponent(addTomate)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -391,10 +391,10 @@ public class TelaHortifruti extends javax.swing.JFrame {
 
         jPanel17.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton7.setText("Adicionar");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        addAbacaxi.setText("Adicionar");
+        addAbacaxi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                addAbacaxiActionPerformed(evt);
             }
         });
 
@@ -404,14 +404,14 @@ public class TelaHortifruti extends javax.swing.JFrame {
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addComponent(jButton7)
+                .addComponent(addAbacaxi)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton7)
+                .addComponent(addAbacaxi)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -457,10 +457,10 @@ public class TelaHortifruti extends javax.swing.JFrame {
 
         jPanel21.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton9.setText("Adicionar");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        addCenora.setText("Adicionar");
+        addCenora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                addCenoraActionPerformed(evt);
             }
         });
 
@@ -470,14 +470,14 @@ public class TelaHortifruti extends javax.swing.JFrame {
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel21Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addComponent(jButton9)
+                .addComponent(addCenora)
                 .addContainerGap(69, Short.MAX_VALUE))
         );
         jPanel21Layout.setVerticalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel21Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton9)
+                .addComponent(addCenora)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -528,10 +528,10 @@ public class TelaHortifruti extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton1.setText("Adicionar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        addBanana.setText("Adicionar");
+        addBanana.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                addBananaActionPerformed(evt);
             }
         });
 
@@ -541,14 +541,14 @@ public class TelaHortifruti extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addComponent(jButton1)
+                .addComponent(addBanana)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(addBanana)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -596,10 +596,10 @@ public class TelaHortifruti extends javax.swing.JFrame {
 
         jPanel11.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton4.setText("Adicionar");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        addAlface.setText("Adicionar");
+        addAlface.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                addAlfaceActionPerformed(evt);
             }
         });
 
@@ -609,14 +609,14 @@ public class TelaHortifruti extends javax.swing.JFrame {
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addComponent(jButton4)
+                .addComponent(addAlface)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton4)
+                .addComponent(addAlface)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -661,10 +661,10 @@ public class TelaHortifruti extends javax.swing.JFrame {
 
         jPanel15.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton6.setText("Adicionar");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        addBatataDoce.setText("Adicionar");
+        addBatataDoce.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                addBatataDoceActionPerformed(evt);
             }
         });
 
@@ -674,14 +674,14 @@ public class TelaHortifruti extends javax.swing.JFrame {
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addComponent(jButton6)
+                .addComponent(addBatataDoce)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton6)
+                .addComponent(addBatataDoce)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -726,10 +726,10 @@ public class TelaHortifruti extends javax.swing.JFrame {
 
         jPanel19.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton8.setText("Adicionar");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        addMorango.setText("Adicionar");
+        addMorango.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                addMorangoActionPerformed(evt);
             }
         });
 
@@ -739,14 +739,14 @@ public class TelaHortifruti extends javax.swing.JFrame {
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addComponent(jButton8)
+                .addComponent(addMorango)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel19Layout.setVerticalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton8)
+                .addComponent(addMorango)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -880,39 +880,39 @@ public class TelaHortifruti extends javax.swing.JFrame {
        o.setVisible(true);
     }//GEN-LAST:event_jLabel11MouseClicked
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void addMacaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addMacaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_addMacaActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void addTomateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTomateActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_addTomateActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void addAbacaxiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAbacaxiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_addAbacaxiActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void addCenoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCenoraActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }//GEN-LAST:event_addCenoraActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void addBananaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBananaActionPerformed
         TelaCarrinho c = new TelaCarrinho();
         this.dispose();
         c.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_addBananaActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void addAlfaceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAlfaceActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_addAlfaceActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void addBatataDoceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBatataDoceActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_addBatataDoceActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void addMorangoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addMorangoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_addMorangoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -951,14 +951,14 @@ public class TelaHortifruti extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton addAbacaxi;
+    private javax.swing.JButton addAlface;
+    private javax.swing.JButton addBanana;
+    private javax.swing.JButton addBatataDoce;
+    private javax.swing.JButton addCenora;
+    private javax.swing.JButton addMaca;
+    private javax.swing.JButton addMorango;
+    private javax.swing.JButton addTomate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

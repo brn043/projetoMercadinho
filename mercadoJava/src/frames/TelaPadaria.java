@@ -47,7 +47,7 @@ public class TelaPadaria extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
+        addPaoForma = new javax.swing.JButton();
         jLabel25 = new javax.swing.JLabel();
         jPanel12 = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
@@ -254,10 +254,10 @@ public class TelaPadaria extends javax.swing.JFrame {
 
         jPanel9.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton3.setText("Adicionar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        addPaoForma.setText("Adicionar");
+        addPaoForma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                addPaoFormaActionPerformed(evt);
             }
         });
 
@@ -267,14 +267,14 @@ public class TelaPadaria extends javax.swing.JFrame {
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addComponent(jButton3)
+                .addComponent(addPaoForma)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton3)
+                .addComponent(addPaoForma)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -869,9 +869,9 @@ public class TelaPadaria extends javax.swing.JFrame {
        o.setVisible(true);
     }//GEN-LAST:event_jLabel11MouseClicked
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void addPaoFormaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPaoFormaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_addPaoFormaActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
@@ -940,8 +940,8 @@ public class TelaPadaria extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton addPaoForma;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;

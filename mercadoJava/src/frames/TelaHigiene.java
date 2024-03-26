@@ -47,49 +47,49 @@ public class TelaHigiene extends javax.swing.JFrame {
         jLabel42 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
         jPanel27 = new javax.swing.JPanel();
-        jButton12 = new javax.swing.JButton();
+        addEscovaDentes = new javax.swing.JButton();
         jLabel44 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jLabel46 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
         jPanel28 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
+        addAlcooGel = new javax.swing.JButton();
         jLabel48 = new javax.swing.JLabel();
         jPanel31 = new javax.swing.JPanel();
         jLabel52 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
         jPanel32 = new javax.swing.JPanel();
-        jButton14 = new javax.swing.JButton();
+        addPapelHigienico = new javax.swing.JButton();
         jLabel54 = new javax.swing.JLabel();
         jPanel35 = new javax.swing.JPanel();
         jLabel58 = new javax.swing.JLabel();
         jLabel59 = new javax.swing.JLabel();
         jPanel36 = new javax.swing.JPanel();
-        jButton16 = new javax.swing.JButton();
+        addFioDental = new javax.swing.JButton();
         jLabel60 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel45 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        addDesodorante = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jPanel29 = new javax.swing.JPanel();
         jLabel49 = new javax.swing.JLabel();
         jLabel50 = new javax.swing.JLabel();
         jPanel30 = new javax.swing.JPanel();
-        jButton13 = new javax.swing.JButton();
+        addSabonete = new javax.swing.JButton();
         jLabel51 = new javax.swing.JLabel();
         jPanel33 = new javax.swing.JPanel();
         jLabel55 = new javax.swing.JLabel();
         jLabel56 = new javax.swing.JLabel();
         jPanel34 = new javax.swing.JPanel();
-        jButton15 = new javax.swing.JButton();
+        addPenteCabelo = new javax.swing.JButton();
         jLabel57 = new javax.swing.JLabel();
         jPanel37 = new javax.swing.JPanel();
         jLabel61 = new javax.swing.JLabel();
         jLabel62 = new javax.swing.JLabel();
         jPanel38 = new javax.swing.JPanel();
-        jButton17 = new javax.swing.JButton();
+        addEnxaquanteBucal = new javax.swing.JButton();
         jLabel63 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -254,10 +254,10 @@ public class TelaHigiene extends javax.swing.JFrame {
 
         jPanel27.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton12.setText("Adicionar");
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
+        addEscovaDentes.setText("Adicionar");
+        addEscovaDentes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                addEscovaDentesActionPerformed(evt);
             }
         });
 
@@ -267,14 +267,14 @@ public class TelaHigiene extends javax.swing.JFrame {
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel27Layout.createSequentialGroup()
                 .addGap(66, 66, 66)
-                .addComponent(jButton12)
+                .addComponent(addEscovaDentes)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel27Layout.setVerticalGroup(
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel27Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton12)
+                .addComponent(addEscovaDentes)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -322,10 +322,10 @@ public class TelaHigiene extends javax.swing.JFrame {
 
         jPanel28.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton3.setText("Adicionar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        addAlcooGel.setText("Adicionar");
+        addAlcooGel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                addAlcooGelActionPerformed(evt);
             }
         });
 
@@ -335,14 +335,14 @@ public class TelaHigiene extends javax.swing.JFrame {
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel28Layout.createSequentialGroup()
                 .addGap(82, 82, 82)
-                .addComponent(jButton3)
+                .addComponent(addAlcooGel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel28Layout.setVerticalGroup(
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel28Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton3)
+                .addComponent(addAlcooGel)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -388,10 +388,10 @@ public class TelaHigiene extends javax.swing.JFrame {
 
         jPanel32.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton14.setText("Adicionar");
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
+        addPapelHigienico.setText("Adicionar");
+        addPapelHigienico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                addPapelHigienicoActionPerformed(evt);
             }
         });
 
@@ -401,14 +401,14 @@ public class TelaHigiene extends javax.swing.JFrame {
             jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel32Layout.createSequentialGroup()
                 .addGap(80, 80, 80)
-                .addComponent(jButton14)
+                .addComponent(addPapelHigienico)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel32Layout.setVerticalGroup(
             jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel32Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton14)
+                .addComponent(addPapelHigienico)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -455,10 +455,10 @@ public class TelaHigiene extends javax.swing.JFrame {
 
         jPanel36.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton16.setText("Adicionar");
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
+        addFioDental.setText("Adicionar");
+        addFioDental.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
+                addFioDentalActionPerformed(evt);
             }
         });
 
@@ -468,14 +468,14 @@ public class TelaHigiene extends javax.swing.JFrame {
             jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel36Layout.createSequentialGroup()
                 .addGap(76, 76, 76)
-                .addComponent(jButton16)
+                .addComponent(addFioDental)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel36Layout.setVerticalGroup(
             jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel36Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton16)
+                .addComponent(addFioDental)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -524,10 +524,10 @@ public class TelaHigiene extends javax.swing.JFrame {
 
         jPanel6.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton1.setText("Adicionar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        addDesodorante.setText("Adicionar");
+        addDesodorante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                addDesodoranteActionPerformed(evt);
             }
         });
 
@@ -537,14 +537,14 @@ public class TelaHigiene extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(81, 81, 81)
-                .addComponent(jButton1)
+                .addComponent(addDesodorante)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(addDesodorante)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -588,10 +588,10 @@ public class TelaHigiene extends javax.swing.JFrame {
 
         jPanel30.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton13.setText("Adicionar");
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
+        addSabonete.setText("Adicionar");
+        addSabonete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
+                addSaboneteActionPerformed(evt);
             }
         });
 
@@ -601,14 +601,14 @@ public class TelaHigiene extends javax.swing.JFrame {
             jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel30Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addComponent(jButton13)
+                .addComponent(addSabonete)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel30Layout.setVerticalGroup(
             jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel30Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton13)
+                .addComponent(addSabonete)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -658,10 +658,10 @@ public class TelaHigiene extends javax.swing.JFrame {
 
         jPanel34.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton15.setText("Adicionar");
-        jButton15.addActionListener(new java.awt.event.ActionListener() {
+        addPenteCabelo.setText("Adicionar");
+        addPenteCabelo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15ActionPerformed(evt);
+                addPenteCabeloActionPerformed(evt);
             }
         });
 
@@ -671,14 +671,14 @@ public class TelaHigiene extends javax.swing.JFrame {
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel34Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton15)
+                .addComponent(addPenteCabelo)
                 .addGap(63, 63, 63))
         );
         jPanel34Layout.setVerticalGroup(
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel34Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton15)
+                .addComponent(addPenteCabelo)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -726,10 +726,10 @@ public class TelaHigiene extends javax.swing.JFrame {
 
         jPanel38.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton17.setText("Adicionar");
-        jButton17.addActionListener(new java.awt.event.ActionListener() {
+        addEnxaquanteBucal.setText("Adicionar");
+        addEnxaquanteBucal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton17ActionPerformed(evt);
+                addEnxaquanteBucalActionPerformed(evt);
             }
         });
 
@@ -739,14 +739,14 @@ public class TelaHigiene extends javax.swing.JFrame {
             jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel38Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addComponent(jButton17)
+                .addComponent(addEnxaquanteBucal)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel38Layout.setVerticalGroup(
             jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel38Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton17)
+                .addComponent(addEnxaquanteBucal)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -879,39 +879,39 @@ public class TelaHigiene extends javax.swing.JFrame {
        o.setVisible(true);
     }//GEN-LAST:event_jLabel152MouseClicked
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    private void addEscovaDentesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEscovaDentesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton12ActionPerformed
+    }//GEN-LAST:event_addEscovaDentesActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void addAlcooGelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAlcooGelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_addAlcooGelActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+    private void addPapelHigienicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPapelHigienicoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton14ActionPerformed
+    }//GEN-LAST:event_addPapelHigienicoActionPerformed
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+    private void addFioDentalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addFioDentalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton16ActionPerformed
+    }//GEN-LAST:event_addFioDentalActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void addDesodoranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addDesodoranteActionPerformed
         TelaCarrinho c = new TelaCarrinho();
         this.dispose();
         c.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_addDesodoranteActionPerformed
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+    private void addSaboneteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addSaboneteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton13ActionPerformed
+    }//GEN-LAST:event_addSaboneteActionPerformed
 
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+    private void addPenteCabeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPenteCabeloActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton15ActionPerformed
+    }//GEN-LAST:event_addPenteCabeloActionPerformed
 
-    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+    private void addEnxaquanteBucalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEnxaquanteBucalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton17ActionPerformed
+    }//GEN-LAST:event_addEnxaquanteBucalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -950,14 +950,14 @@ public class TelaHigiene extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton addAlcooGel;
+    private javax.swing.JButton addDesodorante;
+    private javax.swing.JButton addEnxaquanteBucal;
+    private javax.swing.JButton addEscovaDentes;
+    private javax.swing.JButton addFioDental;
+    private javax.swing.JButton addPapelHigienico;
+    private javax.swing.JButton addPenteCabelo;
+    private javax.swing.JButton addSabonete;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel134;
     private javax.swing.JLabel jLabel135;
