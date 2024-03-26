@@ -1052,7 +1052,7 @@ b.setVisible(true);
     }//GEN-LAST:event_jLabel14MouseClicked
 
     private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
-       TelaCadastro c = new TelaCadastro();
+        TelaCadastro c = new TelaCadastro();
         this.dispose();
         c.setVisible(true);
     }//GEN-LAST:event_jLabel19MouseClicked
