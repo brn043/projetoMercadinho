@@ -30,7 +30,7 @@ public class ProdutosDAO {
 
             while (rs.next()) {
                 Produtos produto = new Produtos();
-                produto.setIdProduto(rs.getInt("idprodutos"));
+                produto.setIdProduto(rs.getInt("idproduto"));
                 produto.setNome(rs.getString("nome"));
                 produto.setCategoria(rs.getString("categoria"));
                 produto.setPreco(rs.getFloat("preço"));
@@ -75,7 +75,7 @@ public class ProdutosDAO {
             Connection conexao = (Connection) Conexao.conectar();
             PreparedStatement stmt = null;
 
-            stmt = conexao.prepareStatement("DELETE FROM produtos WHERE idprodutos = ?");
+            stmt = conexao.prepareStatement("DELETE FROM produtos WHERE idproduto = ?");
             stmt.setInt(1, produto.getIdProduto());
             stmt.executeUpdate();
 
@@ -96,7 +96,7 @@ public class ProdutosDAO {
             Connection conexao = (Connection) Conexao.conectar();
             PreparedStatement stmt = null;
 
-            stmt = conexao.prepareStatement("UPDATE produtos SET nome =?, categoria =?, preço=?, quantidade =? WHERE idprodutos =?");
+            stmt = conexao.prepareStatement("UPDATE produtos SET nome =?, categoria =?, preço=?, quantidade =? WHERE idproduto =?");
             stmt.setString(1, produto.getNome());
             stmt.setString(2, produto.getCategoria());
             stmt.setFloat(3, produto.getPreco());
