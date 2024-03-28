@@ -44,7 +44,9 @@ LoginDAO userdao = new LoginDAO();
         entrar = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         inputSenha = new javax.swing.JPasswordField();
+        jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        admin = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -54,7 +56,7 @@ LoginDAO userdao = new LoginDAO();
         btnConfirmar.setBackground(new java.awt.Color(255, 255, 255));
         btnConfirmar.setFont(new java.awt.Font("Gadugi", 0, 11)); // NOI18N
         btnConfirmar.setText("Confirmar");
-        btnConfirmar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnConfirmar.setBorder(new javax.swing.border.SoftBevelBorder(0));
         btnConfirmar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnConfirmar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,6 +103,13 @@ LoginDAO userdao = new LoginDAO();
         jLabel7.setForeground(new java.awt.Color(51, 51, 51));
         jLabel7.setText("Esqueceu a senha ?");
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/direcao.png"))); // NOI18N
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -126,13 +135,18 @@ LoginDAO userdao = new LoginDAO();
                         .addComponent(entrar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(297, 297, 297)
-                        .addComponent(btnConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(jLabel3)))
                 .addContainerGap(263, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
+                .addGap(27, 27, 27)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addGap(41, 41, 41)
                 .addComponent(jLabel4)
@@ -154,15 +168,28 @@ LoginDAO userdao = new LoginDAO();
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
+        admin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo-removebg-preview (1).png"))); // NOI18N
+        admin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                adminMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 726, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(232, Short.MAX_VALUE)
+                .addComponent(admin)
+                .addGap(194, 194, 194))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(157, 157, 157)
+                .addComponent(admin)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -187,22 +214,14 @@ LoginDAO userdao = new LoginDAO();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
-        String login = inputUsuario.getText();
+          String login = inputUsuario.getText();
         char[] senhaa = inputSenha.getPassword();
         String senha = new String(senhaa);
-        if (userdao.login(login, senha)) { 
-            if(login.equals("admin")){
-            JOptionPane.showConfirmDialog(rootPane, "Login bem sucedido. Bem vindo Administrador!", "Login", DEFAULT_OPTION, PLAIN_MESSAGE);
-            TelaAdmin ta = new TelaAdmin();
-            this.dispose();
-            ta.setVisible(true);    
-            }else{
-            JOptionPane.showConfirmDialog(rootPane, "Login bem sucedido, Bem vindo à nossa loja " + login + "!", "Login", DEFAULT_OPTION, PLAIN_MESSAGE);
-            TelaProdutos tp = new TelaProdutos();
-            this.dispose();
-            tp.setVisible(true);
-            System.out.println("ID ATUAL: " + Usuarios.getIdUsuario());
-            }
+        if (userdao.login(login, senha)) {                   
+            JOptionPane.showConfirmDialog(rootPane, "Login bem sucedido", "Login", DEFAULT_OPTION, PLAIN_MESSAGE);
+             TelaProdutos p = new TelaProdutos();
+             this.dispose();
+             p.setVisible(true);
         } else {
             JOptionPane.showMessageDialog(null, "Usuário e/ou senha inválidos!");
         }
@@ -217,6 +236,18 @@ LoginDAO userdao = new LoginDAO();
         this.dispose();
         tc.setVisible(true);
     }//GEN-LAST:event_entrarMouseClicked
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        TelaProdutos p = new TelaProdutos();
+        this.dispose();
+        p.setVisible(true);
+    }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void adminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_adminMouseClicked
+        TelaAdmin a = new TelaAdmin();
+        this.dispose();
+        a.setVisible(true);
+    }//GEN-LAST:event_adminMouseClicked
 
     /**
      * @param args the command line arguments
@@ -257,12 +288,14 @@ LoginDAO userdao = new LoginDAO();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel admin;
     private javax.swing.JButton btnConfirmar;
     private javax.swing.JLabel entrar;
     private javax.swing.JPasswordField inputSenha;
     private javax.swing.JTextField inputUsuario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
