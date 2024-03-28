@@ -848,7 +848,6 @@ public class Carnes extends javax.swing.JFrame {
         TelaProdutos p = new TelaProdutos();
         this.dispose();
         p.setVisible(true);
-
     }//GEN-LAST:event_jLabel19MouseClicked
 
     private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
@@ -859,26 +858,26 @@ public class Carnes extends javax.swing.JFrame {
 
     private void jLabel22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel22MouseClicked
         Higiene h = new Higiene();
-       this.dispose();
-       h.setVisible(true);
+        this.dispose();
+        h.setVisible(true);
     }//GEN-LAST:event_jLabel22MouseClicked
 
     private void jLabel23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel23MouseClicked
-         Hortifruti ho = new Hortifruti();
+        Hortifruti ho = new Hortifruti();
         this.dispose();
         ho.setVisible(true);
     }//GEN-LAST:event_jLabel23MouseClicked
 
     private void jLabel24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel24MouseClicked
         Padaria pa = new Padaria();
-       this.dispose();
-       pa.setVisible(true);
+        this.dispose();
+        pa.setVisible(true);
     }//GEN-LAST:event_jLabel24MouseClicked
 
     private void jLabel25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel25MouseClicked
-          Ofertas o = new Ofertas();
-       this.dispose();
-       o.setVisible(true);
+        Ofertas o = new Ofertas();
+        this.dispose();
+        o.setVisible(true);
     }//GEN-LAST:event_jLabel25MouseClicked
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed

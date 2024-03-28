@@ -14,18 +14,16 @@ public class Carrinho {
    private String produto;
    private int quantidade;
    private float preco;
-   private int idCliente;
    private float total = preco * quantidade;
 
     public Carrinho() {
     }
 
-    public Carrinho(int idCompra, String produto, int quantidade, float preco, int idCliente, float total) {
+    public Carrinho(int idCompra, String produto, int quantidade, float preco, float total) {
         this.idCompra = idCompra;
         this.produto = produto;
         this.quantidade = quantidade;
         this.preco = preco;
-        this.idCliente = idCliente;
         this.total = total;
     }
 
@@ -43,10 +41,6 @@ public class Carrinho {
 
     public float getPreco() {
         return preco;
-    }
-
-    public int getIdCliente() {
-        return idCliente;
     }
 
     public float getTotal() {
@@ -67,10 +61,6 @@ public class Carrinho {
 
     public void setPreco(float preco) {
         this.preco = preco;
-    }
-
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
     }
 
     public void setTotal(float total) {

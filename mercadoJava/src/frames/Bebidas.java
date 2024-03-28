@@ -7,9 +7,7 @@ package frames;
 
 import javax.swing.JOptionPane;
 import model.bean.Carrinho;
-import model.bean.Usuarios;
 import model.dao.CarrinhoDAO;
-import model.dao.LoginDAO;
 
 /**
  *
@@ -982,8 +980,6 @@ public class Bebidas extends javax.swing.JFrame {
             produto.setQuantidade(Integer.parseInt("1"));
             produto.setPreco(Float.parseFloat("10.00"));
             produto.setTotal(produto.getPreco() * produto.getQuantidade());
-            LoginDAO user = new LoginDAO();
-            produto.setIdCliente(Usuarios.getIdUsuario());
             carrinhodao.adicionarAoCarrinho(produto);
             JOptionPane.showMessageDialog(null, "Produto adicionado ao carrinho");
         } catch (Exception e) {
@@ -996,7 +992,6 @@ public class Bebidas extends javax.swing.JFrame {
         produto.setQuantidade(Integer.parseInt("1"));
         produto.setPreco(Float.parseFloat("5.60"));
         produto.setTotal(produto.getPreco() * produto.getQuantidade());
-        produto.setIdCliente(Usuarios.getIdUsuario());
         carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_addTubainaActionPerformed
 
@@ -1005,7 +1000,6 @@ public class Bebidas extends javax.swing.JFrame {
         produto.setQuantidade(Integer.parseInt("1"));
         produto.setPreco(Float.parseFloat("215.50"));
         produto.setTotal(produto.getPreco() * produto.getQuantidade());
-        produto.setIdCliente(Usuarios.getIdUsuario());
         carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_addGoldLabelActionPerformed
 
@@ -1014,7 +1008,6 @@ public class Bebidas extends javax.swing.JFrame {
         produto.setQuantidade(Integer.parseInt("1"));
         produto.setPreco(Float.parseFloat("7.80"));
         produto.setTotal(produto.getPreco() * produto.getQuantidade());
-        produto.setIdCliente(Usuarios.getIdUsuario());
         carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_addFantaActionPerformed
 
@@ -1023,7 +1016,6 @@ public class Bebidas extends javax.swing.JFrame {
         produto.setQuantidade(Integer.parseInt("1"));
         produto.setPreco(Float.parseFloat("15.00"));
         produto.setTotal(produto.getPreco() * produto.getQuantidade());
-        produto.setIdCliente(Usuarios.getIdUsuario());
         carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_addGuaranaJesusActionPerformed
 
@@ -1032,7 +1024,6 @@ public class Bebidas extends javax.swing.JFrame {
         produto.setQuantidade(Integer.parseInt("1"));
         produto.setPreco(Float.parseFloat("11.90"));
         produto.setTotal(produto.getPreco() * produto.getQuantidade());
-        produto.setIdCliente(Usuarios.getIdUsuario());
         carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_addCocaActionPerformed
 
@@ -1041,7 +1032,6 @@ public class Bebidas extends javax.swing.JFrame {
         produto.setQuantidade(Integer.parseInt("1"));
         produto.setPreco(Float.parseFloat("8.80"));
         produto.setTotal(produto.getPreco() * produto.getQuantidade());
-        produto.setIdCliente(Usuarios.getIdUsuario());
         carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_addPepsiActionPerformed
 
@@ -1050,7 +1040,6 @@ public class Bebidas extends javax.swing.JFrame {
         produto.setQuantidade(Integer.parseInt("1"));
         produto.setPreco(Float.parseFloat("16.20"));
         produto.setTotal(produto.getPreco() * produto.getQuantidade());
-        produto.setIdCliente(Usuarios.getIdUsuario());
         carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_addSucoPratsActionPerformed
 
