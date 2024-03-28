@@ -190,12 +190,19 @@ LoginDAO userdao = new LoginDAO();
         String login = inputUsuario.getText();
         char[] senhaa = inputSenha.getPassword();
         String senha = new String(senhaa);
-        if (userdao.login(login, senha)) {                   
-            JOptionPane.showConfirmDialog(rootPane, "Login bem sucedido", "Login", DEFAULT_OPTION, PLAIN_MESSAGE);
+        if (userdao.login(login, senha)) { 
+            if(login.equals("admin")){
+            JOptionPane.showConfirmDialog(rootPane, "Login bem sucedido. Bem vindo Administrador!", "Login", DEFAULT_OPTION, PLAIN_MESSAGE);
+            TelaAdmin ta = new TelaAdmin();
+            this.dispose();
+            ta.setVisible(true);    
+            }else{
+            JOptionPane.showConfirmDialog(rootPane, "Login bem sucedido, Bem vindo à nossa loja " + login + "!", "Login", DEFAULT_OPTION, PLAIN_MESSAGE);
             TelaProdutos tp = new TelaProdutos();
             this.dispose();
             tp.setVisible(true);
             System.out.println("ID ATUAL: " + Usuarios.getIdUsuario());
+            }
         } else {
             JOptionPane.showMessageDialog(null, "Usuário e/ou senha inválidos!");
         }

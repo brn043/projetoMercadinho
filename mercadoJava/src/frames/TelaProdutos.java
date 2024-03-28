@@ -51,8 +51,8 @@ public class TelaProdutos extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         jLabel153 = new javax.swing.JLabel();
         jLabel154 = new javax.swing.JLabel();
-        jLabel155 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        AccountLabel = new javax.swing.JLabel();
+        AccountIcon = new javax.swing.JLabel();
         jLabel156 = new javax.swing.JLabel();
         jLabel157 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -241,13 +241,13 @@ public class TelaProdutos extends javax.swing.JFrame {
                 .addComponent(jLabel7)
                 .addGap(131, 131, 131)
                 .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 222, Short.MAX_VALUE)
                 .addComponent(jLabel9)
                 .addGap(141, 141, 141)
                 .addComponent(jLabel10)
                 .addGap(122, 122, 122)
                 .addComponent(jLabel11)
-                .addGap(49, 49, 49))
+                .addGap(50, 50, 50))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -291,12 +291,19 @@ public class TelaProdutos extends javax.swing.JFrame {
 
         jLabel154.setText(" 0800 200 8110 ");
 
-        jLabel155.setText("Minha Conta");
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/do-utilizador.png"))); // NOI18N
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+        AccountLabel.setText("Minha Conta");
+        AccountLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        AccountLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
+                AccountLabelMouseClicked(evt);
+            }
+        });
+
+        AccountIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/do-utilizador.png"))); // NOI18N
+        AccountIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        AccountIcon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AccountIconMouseClicked(evt);
             }
         });
 
@@ -329,11 +336,11 @@ public class TelaProdutos extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel154)
                         .addGap(26, 26, 26)
-                        .addComponent(jLabel155))
+                        .addComponent(AccountLabel))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel157)
                         .addGap(69, 69, 69)
-                        .addComponent(jLabel2)
+                        .addComponent(AccountIcon)
                         .addGap(14, 14, 14)))
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
@@ -361,12 +368,12 @@ public class TelaProdutos extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
+                            .addComponent(AccountIcon)
                             .addComponent(jLabel156)
                             .addComponent(jLabel157, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel155)
+                            .addComponent(AccountLabel)
                             .addComponent(jLabel153)
                             .addComponent(jLabel154))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 21, Short.MAX_VALUE))
@@ -996,9 +1003,9 @@ public class TelaProdutos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
-Bebidas b = new Bebidas();
-this.dispose();
-b.setVisible(true);
+        Bebidas b = new Bebidas();
+        this.dispose();
+        b.setVisible(true);
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
@@ -1008,9 +1015,9 @@ b.setVisible(true);
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
-       Higiene h = new Higiene();
-       this.dispose();
-       h.setVisible(true);
+        Higiene h = new Higiene();
+        this.dispose();
+        h.setVisible(true);
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
@@ -1020,15 +1027,15 @@ b.setVisible(true);
     }//GEN-LAST:event_jLabel9MouseClicked
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
-       Padaria pa = new Padaria();
-       this.dispose();
-       pa.setVisible(true);
+        Padaria pa = new Padaria();
+        this.dispose();
+        pa.setVisible(true);
     }//GEN-LAST:event_jLabel10MouseClicked
 
     private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
-       Ofertas o = new Ofertas();
-       this.dispose();
-       o.setVisible(true);
+        Ofertas o = new Ofertas();
+        this.dispose();
+        o.setVisible(true);
     }//GEN-LAST:event_jLabel11MouseClicked
 
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
@@ -1057,20 +1064,22 @@ b.setVisible(true);
         c.setVisible(true);
     }//GEN-LAST:event_jLabel19MouseClicked
 
-    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-        
-    }//GEN-LAST:event_jLabel2MouseClicked
+    private void AccountIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccountIconMouseClicked
+        TelaLogin tl = new TelaLogin();
+        this.dispose();
+        tl.setVisible(true);
+    }//GEN-LAST:event_AccountIconMouseClicked
 
     private void jLabel156MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel156MouseClicked
-      TelaCarrinho c = new TelaCarrinho();
+        TelaCarrinho c = new TelaCarrinho();
         this.dispose();
         c.setVisible(true);
     }//GEN-LAST:event_jLabel156MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       TelaCarrinho c = new TelaCarrinho();
-       this.dispose();
-       c.setVisible(true);
+        TelaCarrinho c = new TelaCarrinho();
+        this.dispose();
+        c.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -1104,6 +1113,12 @@ b.setVisible(true);
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void AccountLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccountLabelMouseClicked
+        TelaLogin tl = new TelaLogin();
+        this.dispose();
+        tl.setVisible(true);
+    }//GEN-LAST:event_AccountLabelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -1142,6 +1157,8 @@ b.setVisible(true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel AccountIcon;
+    private javax.swing.JLabel AccountLabel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -1160,14 +1177,12 @@ b.setVisible(true);
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel153;
     private javax.swing.JLabel jLabel154;
-    private javax.swing.JLabel jLabel155;
     private javax.swing.JLabel jLabel156;
     private javax.swing.JLabel jLabel157;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;

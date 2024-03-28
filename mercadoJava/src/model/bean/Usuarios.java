@@ -11,18 +11,28 @@ package model.bean;
  */
 public class Usuarios {
     private static int idUsuario;
+
+    public static void setAccess() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     private String nome;
     private String cpf;
     private static String login;
     private String senha;
+    private static boolean access;
 
     public Usuarios() {
     }
 
-    public Usuarios(int idUsuario, String nome, String cpf, String senha) {
+    public Usuarios(int idUsuario, String nome, String cpf, String senha, boolean access) {
         this.nome = nome;
         this.cpf = cpf;
         this.senha = senha;
+        Usuarios.access = access;
+    }
+    
+    public static boolean getAccess(){
+        return access;
     }
 
     public static int getIdUsuario() {
@@ -43,6 +53,10 @@ public class Usuarios {
 
     public String getSenha() {
         return senha;
+    }
+    
+    public void setAccess(boolean access){
+        Usuarios.access = access;
     }
 
     public void setIdUsuario(int idUsuario) {

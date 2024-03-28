@@ -96,7 +96,7 @@ public class ProdutosDAO {
             Connection conexao = (Connection) Conexao.conectar();
             PreparedStatement stmt = null;
 
-            stmt = conexao.prepareStatement("UPDATE produtos SET nome =?, categoria =?, preço=?, quantidade =? WHERE idproduto =?");
+            stmt = conexao.prepareStatement("UPDATE produtos SET quantidade = quantidade + 1");
             stmt.setString(1, produto.getNome());
             stmt.setString(2, produto.getCategoria());
             stmt.setFloat(3, produto.getPreco());

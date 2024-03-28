@@ -9,6 +9,7 @@ import javax.swing.JOptionPane;
 import model.bean.Carrinho;
 import model.bean.Usuarios;
 import model.dao.CarrinhoDAO;
+import model.dao.LoginDAO;
 
 /**
  *
@@ -981,6 +982,7 @@ public class Bebidas extends javax.swing.JFrame {
             produto.setQuantidade(Integer.parseInt("1"));
             produto.setPreco(Float.parseFloat("10.00"));
             produto.setTotal(produto.getPreco() * produto.getQuantidade());
+            LoginDAO user = new LoginDAO();
             produto.setIdCliente(Usuarios.getIdUsuario());
             carrinhodao.adicionarAoCarrinho(produto);
             JOptionPane.showMessageDialog(null, "Produto adicionado ao carrinho");

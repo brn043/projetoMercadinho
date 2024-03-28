@@ -5,7 +5,7 @@
  */
 package main;
 
-import frames.TelaLogin;
+import frames.TelaProdutos;
 
 /**
  *
@@ -16,7 +16,7 @@ public class Main {
   public static void main (String[] Args){
       java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaLogin().setVisible(true);
+                new TelaProdutos().setVisible(true);
             }
         });
   }  
