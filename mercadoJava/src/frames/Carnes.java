@@ -5,11 +5,16 @@
  */
 package frames;
 
+import model.bean.Carrinho;
+import model.dao.CarrinhoDAO;
+
 /**
  *
  * @author Senai
  */
 public class Carnes extends javax.swing.JFrame {
+ Carrinho produto = new Carrinho();
+    CarrinhoDAO carrinhodao = new CarrinhoDAO();
 
     /**
      * Creates new form Carnes
@@ -47,49 +52,49 @@ public class Carnes extends javax.swing.JFrame {
         jLabel42 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
         jPanel27 = new javax.swing.JPanel();
-        jButton12 = new javax.swing.JButton();
+        btnPernilCordeiro = new javax.swing.JButton();
         jLabel44 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel45 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        btnCostelaPorco = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jLabel46 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
         jPanel28 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
+        btnFileMignon = new javax.swing.JButton();
         jLabel48 = new javax.swing.JLabel();
         jPanel29 = new javax.swing.JPanel();
         jLabel49 = new javax.swing.JLabel();
         jLabel50 = new javax.swing.JLabel();
         jPanel30 = new javax.swing.JPanel();
-        jButton13 = new javax.swing.JButton();
+        btnSobreCoxa = new javax.swing.JButton();
         jLabel51 = new javax.swing.JLabel();
         jPanel31 = new javax.swing.JPanel();
         jLabel52 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
         jPanel32 = new javax.swing.JPanel();
-        jButton14 = new javax.swing.JButton();
+        btnPicanha = new javax.swing.JButton();
         jLabel54 = new javax.swing.JLabel();
         jPanel33 = new javax.swing.JPanel();
         jLabel55 = new javax.swing.JLabel();
         jLabel56 = new javax.swing.JLabel();
         jPanel34 = new javax.swing.JPanel();
-        jButton15 = new javax.swing.JButton();
+        btnAlcatra = new javax.swing.JButton();
         jLabel57 = new javax.swing.JLabel();
         jPanel35 = new javax.swing.JPanel();
         jLabel58 = new javax.swing.JLabel();
         jLabel59 = new javax.swing.JLabel();
         jPanel36 = new javax.swing.JPanel();
-        jButton16 = new javax.swing.JButton();
+        btnContraFilé = new javax.swing.JButton();
         jLabel60 = new javax.swing.JLabel();
         jPanel37 = new javax.swing.JPanel();
         jLabel61 = new javax.swing.JLabel();
         jLabel62 = new javax.swing.JLabel();
         jPanel38 = new javax.swing.JPanel();
-        jButton17 = new javax.swing.JButton();
+        btnPeitoFrango = new javax.swing.JButton();
         jLabel63 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -254,10 +259,10 @@ public class Carnes extends javax.swing.JFrame {
 
         jPanel27.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton12.setText("Adicionar");
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
+        btnPernilCordeiro.setText("Adicionar");
+        btnPernilCordeiro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                btnPernilCordeiroActionPerformed(evt);
             }
         });
 
@@ -267,14 +272,14 @@ public class Carnes extends javax.swing.JFrame {
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel27Layout.createSequentialGroup()
                 .addGap(66, 66, 66)
-                .addComponent(jButton12)
+                .addComponent(btnPernilCordeiro)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel27Layout.setVerticalGroup(
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel27Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton12)
+                .addComponent(btnPernilCordeiro)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -321,10 +326,10 @@ public class Carnes extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton1.setText("Adicionar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnCostelaPorco.setText("Adicionar");
+        btnCostelaPorco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnCostelaPorcoActionPerformed(evt);
             }
         });
 
@@ -334,14 +339,14 @@ public class Carnes extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(81, 81, 81)
-                .addComponent(jButton1)
+                .addComponent(btnCostelaPorco)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(btnCostelaPorco)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -385,10 +390,10 @@ public class Carnes extends javax.swing.JFrame {
 
         jPanel28.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton3.setText("Adicionar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnFileMignon.setText("Adicionar");
+        btnFileMignon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnFileMignonActionPerformed(evt);
             }
         });
 
@@ -398,14 +403,14 @@ public class Carnes extends javax.swing.JFrame {
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel28Layout.createSequentialGroup()
                 .addGap(82, 82, 82)
-                .addComponent(jButton3)
+                .addComponent(btnFileMignon)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel28Layout.setVerticalGroup(
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel28Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton3)
+                .addComponent(btnFileMignon)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -454,10 +459,10 @@ public class Carnes extends javax.swing.JFrame {
 
         jPanel30.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton13.setText("Adicionar");
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
+        btnSobreCoxa.setText("Adicionar");
+        btnSobreCoxa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
+                btnSobreCoxaActionPerformed(evt);
             }
         });
 
@@ -467,14 +472,14 @@ public class Carnes extends javax.swing.JFrame {
             jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel30Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addComponent(jButton13)
+                .addComponent(btnSobreCoxa)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel30Layout.setVerticalGroup(
             jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel30Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton13)
+                .addComponent(btnSobreCoxa)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -522,10 +527,10 @@ public class Carnes extends javax.swing.JFrame {
 
         jPanel32.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton14.setText("Adicionar");
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
+        btnPicanha.setText("Adicionar");
+        btnPicanha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                btnPicanhaActionPerformed(evt);
             }
         });
 
@@ -535,14 +540,14 @@ public class Carnes extends javax.swing.JFrame {
             jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel32Layout.createSequentialGroup()
                 .addGap(80, 80, 80)
-                .addComponent(jButton14)
+                .addComponent(btnPicanha)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel32Layout.setVerticalGroup(
             jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel32Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton14)
+                .addComponent(btnPicanha)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -590,10 +595,10 @@ public class Carnes extends javax.swing.JFrame {
 
         jPanel34.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton15.setText("Adicionar");
-        jButton15.addActionListener(new java.awt.event.ActionListener() {
+        btnAlcatra.setText("Adicionar");
+        btnAlcatra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15ActionPerformed(evt);
+                btnAlcatraActionPerformed(evt);
             }
         });
 
@@ -603,14 +608,14 @@ public class Carnes extends javax.swing.JFrame {
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel34Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton15)
+                .addComponent(btnAlcatra)
                 .addGap(63, 63, 63))
         );
         jPanel34Layout.setVerticalGroup(
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel34Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton15)
+                .addComponent(btnAlcatra)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -658,10 +663,10 @@ public class Carnes extends javax.swing.JFrame {
 
         jPanel36.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton16.setText("Adicionar");
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
+        btnContraFilé.setText("Adicionar");
+        btnContraFilé.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
+                btnContraFiléActionPerformed(evt);
             }
         });
 
@@ -671,14 +676,14 @@ public class Carnes extends javax.swing.JFrame {
             jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel36Layout.createSequentialGroup()
                 .addGap(76, 76, 76)
-                .addComponent(jButton16)
+                .addComponent(btnContraFilé)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel36Layout.setVerticalGroup(
             jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel36Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton16)
+                .addComponent(btnContraFilé)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -728,10 +733,10 @@ public class Carnes extends javax.swing.JFrame {
 
         jPanel38.setBackground(new java.awt.Color(0, 153, 51));
 
-        jButton17.setText("Adicionar");
-        jButton17.addActionListener(new java.awt.event.ActionListener() {
+        btnPeitoFrango.setText("Adicionar");
+        btnPeitoFrango.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton17ActionPerformed(evt);
+                btnPeitoFrangoActionPerformed(evt);
             }
         });
 
@@ -741,14 +746,14 @@ public class Carnes extends javax.swing.JFrame {
             jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel38Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addComponent(jButton17)
+                .addComponent(btnPeitoFrango)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel38Layout.setVerticalGroup(
             jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel38Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton17)
+                .addComponent(btnPeitoFrango)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -880,39 +885,69 @@ public class Carnes extends javax.swing.JFrame {
         o.setVisible(true);
     }//GEN-LAST:event_jLabel25MouseClicked
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton12ActionPerformed
+    private void btnPernilCordeiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPernilCordeiroActionPerformed
+        produto.setProduto("Pernil-de-Cordeiro");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("80.00"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
+    }//GEN-LAST:event_btnPernilCordeiroActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        TelaCarrinho c = new TelaCarrinho();
-        this.dispose();
-        c.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnCostelaPorcoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCostelaPorcoActionPerformed
+        produto.setProduto("Costela-de-Porco");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("25.50"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
+    }//GEN-LAST:event_btnCostelaPorcoActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void btnFileMignonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFileMignonActionPerformed
+        produto.setProduto("File-Mignon");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("90.90"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
+    }//GEN-LAST:event_btnFileMignonActionPerformed
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton13ActionPerformed
+    private void btnSobreCoxaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSobreCoxaActionPerformed
+        produto.setProduto("Sobre-Coxa");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("10.20"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
+    }//GEN-LAST:event_btnSobreCoxaActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton14ActionPerformed
+    private void btnPicanhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPicanhaActionPerformed
+        produto.setProduto("Picanha");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("108.80"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
+    }//GEN-LAST:event_btnPicanhaActionPerformed
 
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton15ActionPerformed
+    private void btnAlcatraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlcatraActionPerformed
+        produto.setProduto("Alcatra");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("50.40"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
+    }//GEN-LAST:event_btnAlcatraActionPerformed
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton16ActionPerformed
+    private void btnContraFiléActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContraFiléActionPerformed
+        produto.setProduto("Contra-Filé");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("60.90"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
+    }//GEN-LAST:event_btnContraFiléActionPerformed
 
-    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton17ActionPerformed
+    private void btnPeitoFrangoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPeitoFrangoActionPerformed
+        produto.setProduto("Peito-de-Frango");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("12.20"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
+    }//GEN-LAST:event_btnPeitoFrangoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -950,22 +985,14 @@ public class Carnes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton btnAlcatra;
+    private javax.swing.JButton btnContraFilé;
+    private javax.swing.JButton btnCostelaPorco;
+    private javax.swing.JButton btnFileMignon;
+    private javax.swing.JButton btnPeitoFrango;
+    private javax.swing.JButton btnPernilCordeiro;
+    private javax.swing.JButton btnPicanha;
+    private javax.swing.JButton btnSobreCoxa;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel153;
     private javax.swing.JLabel jLabel154;
@@ -980,23 +1007,7 @@ public class Carnes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
@@ -1020,23 +1031,7 @@ public class Carnes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel18;
-    private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel21;
-    private javax.swing.JPanel jPanel22;
-    private javax.swing.JPanel jPanel23;
-    private javax.swing.JPanel jPanel24;
-    private javax.swing.JPanel jPanel25;
     private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel28;

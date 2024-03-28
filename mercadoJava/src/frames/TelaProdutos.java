@@ -1034,7 +1034,7 @@ b.setVisible(true);
 
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
 
-        Carrinho c = new Carrinho();
+        TelaCarrinho c = new TelaCarrinho();
         this.dispose();
         c.setVisible(true);
     }//GEN-LAST:event_jLabel12MouseClicked
@@ -1047,7 +1047,7 @@ b.setVisible(true);
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
 
-        Carrinho c = new Carrinho();
+        TelaCarrinho c = new TelaCarrinho();
         this.dispose();
         c.setVisible(true);
     }//GEN-LAST:event_jLabel14MouseClicked
@@ -1065,13 +1065,13 @@ b.setVisible(true);
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void jLabel156MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel156MouseClicked
-        Carrinho c = new Carrinho();
+        TelaCarrinho c = new TelaCarrinho();
         this.dispose();
         c.setVisible(true);
     }//GEN-LAST:event_jLabel156MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       Carrinho c = new Carrinho();
+       TelaCarrinho c = new TelaCarrinho();
        this.dispose();
        c.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -1089,7 +1089,7 @@ b.setVisible(true);
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        Carrinho c = new Carrinho();
+        TelaCarrinho c = new TelaCarrinho();
         this.dispose();
         c.setVisible(true);
     }//GEN-LAST:event_jButton10ActionPerformed
