@@ -5,12 +5,17 @@
  */
 package frames;
 
+import model.bean.Carrinho;
+import model.dao.CarrinhoDAO;
+
 /**
  *
  * @author Senai
  */
 public class TelaProdutos extends javax.swing.JFrame {
 
+    Carrinho produto = new Carrinho();
+    CarrinhoDAO carrinhodao = new CarrinhoDAO();
     /**
      * Creates new form Produtos
      */

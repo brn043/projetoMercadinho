@@ -5,11 +5,17 @@
  */
 package frames;
 
+import model.bean.Carrinho;
+import model.dao.CarrinhoDAO;
+
 /**
  *
  * @author Senai
  */
 public class Higiene extends javax.swing.JFrame {
+
+    Carrinho produto = new Carrinho();
+    CarrinhoDAO carrinhodao = new CarrinhoDAO();
 
     /**
      * Creates new form Higiene
@@ -37,9 +43,9 @@ public class Higiene extends javax.swing.JFrame {
         jLabel150 = new javax.swing.JLabel();
         jLabel151 = new javax.swing.JLabel();
         jLabel152 = new javax.swing.JLabel();
-        jLabel153 = new javax.swing.JLabel();
+        carrinho = new javax.swing.JLabel();
         jLabel154 = new javax.swing.JLabel();
-        jLabel155 = new javax.swing.JLabel();
+        conta = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel156 = new javax.swing.JLabel();
         jLabel157 = new javax.swing.JLabel();
@@ -184,11 +190,21 @@ public class Higiene extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel153.setText("R$ 00,00");
+        carrinho.setText("R$ 00,00");
+        carrinho.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                carrinhoMouseClicked(evt);
+            }
+        });
 
         jLabel154.setText(" 0800 200 8110 ");
 
-        jLabel155.setText("Minha Conta");
+        conta.setText("Minha Conta");
+        conta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                contaMouseClicked(evt);
+            }
+        });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/do-utilizador.png"))); // NOI18N
 
@@ -207,7 +223,7 @@ public class Higiene extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel154)
                         .addGap(26, 26, 26)
-                        .addComponent(jLabel155))
+                        .addComponent(conta))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel157)
                         .addGap(69, 69, 69)
@@ -216,7 +232,7 @@ public class Higiene extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(29, 29, 29)
-                        .addComponent(jLabel153, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(carrinho, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel156)
@@ -237,8 +253,8 @@ public class Higiene extends javax.swing.JFrame {
                             .addComponent(jLabel157, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel155)
-                            .addComponent(jLabel153)
+                            .addComponent(conta)
+                            .addComponent(carrinho)
                             .addComponent(jLabel154))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -880,38 +896,80 @@ public class Higiene extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel152MouseClicked
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        // TODO add your handling code here:
+     produto.setProduto("Escovas-de-Dentes");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("4.00"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+         produto.setProduto("Alcoo-Gel");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("6.70"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        // TODO add your handling code here:
+       produto.setProduto("Papel-Higiênico");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("80.00"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
-        // TODO add your handling code here:
+        produto.setProduto("Fio-Dental");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("8.99"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        TelaCarrinho c = new TelaCarrinho();
-        this.dispose();
-        c.setVisible(true);
+     produto.setProduto("Desodorante");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("16.99"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        // TODO add your handling code here:
+      produto.setProduto("Sabonete-Barra");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("80.00"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        // TODO add your handling code here:
+      produto.setProduto("Pente-de-Cabelo");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("80.00"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        // TODO add your handling code here:
+      produto.setProduto("Enxaguante-Bucal-500ml");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("12.00"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void contaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contaMouseClicked
+       TelaLogin l = new TelaLogin();
+      this.dispose();
+      l.setVisible(true);
+    }//GEN-LAST:event_contaMouseClicked
+
+    private void carrinhoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_carrinhoMouseClicked
+      TelaCarrinho c = new TelaCarrinho();
+      this.dispose();
+      c.setVisible(true);
+    }//GEN-LAST:event_carrinhoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -949,6 +1007,8 @@ public class Higiene extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel carrinho;
+    private javax.swing.JLabel conta;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
@@ -965,9 +1025,7 @@ public class Higiene extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel150;
     private javax.swing.JLabel jLabel151;
     private javax.swing.JLabel jLabel152;
-    private javax.swing.JLabel jLabel153;
     private javax.swing.JLabel jLabel154;
-    private javax.swing.JLabel jLabel155;
     private javax.swing.JLabel jLabel156;
     private javax.swing.JLabel jLabel157;
     private javax.swing.JLabel jLabel2;

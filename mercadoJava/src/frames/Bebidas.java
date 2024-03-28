@@ -50,9 +50,9 @@ public class Bebidas extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
-        jLabel153 = new javax.swing.JLabel();
+        carrinho = new javax.swing.JLabel();
         jLabel154 = new javax.swing.JLabel();
-        jLabel155 = new javax.swing.JLabel();
+        conta = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel156 = new javax.swing.JLabel();
         jLabel157 = new javax.swing.JLabel();
@@ -265,11 +265,21 @@ public class Bebidas extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel153.setText("R$ 00,00");
+        carrinho.setText("R$ 00,00");
+        carrinho.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                carrinhoMouseClicked(evt);
+            }
+        });
 
         jLabel154.setText(" 0800 200 8110 ");
 
-        jLabel155.setText("Minha Conta");
+        conta.setText("Minha Conta");
+        conta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                contaMouseClicked(evt);
+            }
+        });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/do-utilizador.png"))); // NOI18N
 
@@ -293,7 +303,7 @@ public class Bebidas extends javax.swing.JFrame {
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addComponent(jLabel154)
                         .addGap(26, 26, 26)
-                        .addComponent(jLabel155))
+                        .addComponent(conta))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addComponent(jLabel157)
                         .addGap(69, 69, 69)
@@ -302,7 +312,7 @@ public class Bebidas extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGap(29, 29, 29)
-                        .addComponent(jLabel153, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(carrinho, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel156)
@@ -323,8 +333,8 @@ public class Bebidas extends javax.swing.JFrame {
                             .addComponent(jLabel157, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel155)
-                            .addComponent(jLabel153)
+                            .addComponent(conta)
+                            .addComponent(carrinho)
                             .addComponent(jLabel154))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1054,6 +1064,18 @@ public class Bebidas extends javax.swing.JFrame {
         tc.setVisible(true);
     }//GEN-LAST:event_jLabel156MouseClicked
 
+    private void contaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contaMouseClicked
+      TelaLogin t = new TelaLogin();
+      this.dispose();
+      t.setVisible(true);
+    }//GEN-LAST:event_contaMouseClicked
+
+    private void carrinhoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_carrinhoMouseClicked
+      TelaCarrinho c = new TelaCarrinho();
+      this.dispose();
+      c.setVisible(true);
+    }//GEN-LAST:event_carrinhoMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1098,14 +1120,14 @@ public class Bebidas extends javax.swing.JFrame {
     private javax.swing.JButton addSucoPrats;
     private javax.swing.JButton addSukitaUva;
     private javax.swing.JButton addTubaina;
+    private javax.swing.JLabel carrinho;
+    private javax.swing.JLabel conta;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel153;
     private javax.swing.JLabel jLabel154;
-    private javax.swing.JLabel jLabel155;
     private javax.swing.JLabel jLabel156;
     private javax.swing.JLabel jLabel157;
     private javax.swing.JLabel jLabel16;

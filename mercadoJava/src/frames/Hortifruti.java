@@ -5,12 +5,16 @@
  */
 package frames;
 
+import model.bean.Carrinho;
+import model.dao.CarrinhoDAO;
+
 /**
  *
  * @author Senai
  */
 public class Hortifruti extends javax.swing.JFrame {
-
+Carrinho produto = new Carrinho();
+    CarrinhoDAO carrinhodao = new CarrinhoDAO();
     /**
      * Creates new form Hortifruti
      */
@@ -37,9 +41,9 @@ public class Hortifruti extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
+        carrinho = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
+        conta = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
@@ -184,11 +188,21 @@ public class Hortifruti extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel17.setText("R$ 00,00");
+        carrinho.setText("R$ 00,00");
+        carrinho.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                carrinhoMouseClicked(evt);
+            }
+        });
 
         jLabel18.setText(" 0800 200 8110 ");
 
-        jLabel20.setText("Minha Conta");
+        conta.setText("Minha Conta");
+        conta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                contaMouseClicked(evt);
+            }
+        });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/do-utilizador.png"))); // NOI18N
 
@@ -207,7 +221,7 @@ public class Hortifruti extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel18)
                         .addGap(26, 26, 26)
-                        .addComponent(jLabel20))
+                        .addComponent(conta))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel22)
                         .addGap(69, 69, 69)
@@ -216,7 +230,7 @@ public class Hortifruti extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(29, 29, 29)
-                        .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(carrinho, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel21)
@@ -237,8 +251,8 @@ public class Hortifruti extends javax.swing.JFrame {
                             .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel20)
-                            .addComponent(jLabel17)
+                            .addComponent(conta)
+                            .addComponent(carrinho)
                             .addComponent(jLabel18))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -881,38 +895,80 @@ public class Hortifruti extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel11MouseClicked
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+            produto.setProduto("Maça");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("6.70"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+           produto.setProduto("Tomate-Xuxa");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("6.30"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
+            produto.setProduto("Abacaxi-Perola");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("3.80"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
+         produto.setProduto("Cenoura");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("3.30"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        TelaCarrinho c = new TelaCarrinho();
-        this.dispose();
-        c.setVisible(true);
+         produto.setProduto("Banana");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("3.90"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        produto.setProduto("Alface");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("3.00"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
+           produto.setProduto("Batata-Doce");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("5.90"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+          produto.setProduto("Morango");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("7.99"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void contaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contaMouseClicked
+      TelaLogin l = new TelaLogin();
+      this.dispose();
+      l.setVisible(true);
+    }//GEN-LAST:event_contaMouseClicked
+
+    private void carrinhoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_carrinhoMouseClicked
+      TelaCarrinho c = new TelaCarrinho();
+      this.dispose();
+      c.setVisible(true);
+    }//GEN-LAST:event_carrinhoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -950,6 +1006,8 @@ public class Hortifruti extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel carrinho;
+    private javax.swing.JLabel conta;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -961,11 +1019,9 @@ public class Hortifruti extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
