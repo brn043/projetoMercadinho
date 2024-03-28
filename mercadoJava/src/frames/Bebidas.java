@@ -274,6 +274,11 @@ public class Bebidas extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/do-utilizador.png"))); // NOI18N
 
         jLabel156.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/groceries (2).png"))); // NOI18N
+        jLabel156.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel156MouseClicked(evt);
+            }
+        });
 
         jLabel157.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/telefone-circular (1).png"))); // NOI18N
 
@@ -1042,6 +1047,12 @@ public class Bebidas extends javax.swing.JFrame {
         produto.setTotal(produto.getPreco() * produto.getQuantidade());
         carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_addSucoPratsActionPerformed
+
+    private void jLabel156MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel156MouseClicked
+        TelaCarrinho tc = new TelaCarrinho();
+        this.dispose();
+        tc.setVisible(true);
+    }//GEN-LAST:event_jLabel156MouseClicked
 
     /**
      * @param args the command line arguments
