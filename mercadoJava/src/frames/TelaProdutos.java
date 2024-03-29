@@ -32,12 +32,6 @@ public class TelaProdutos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel6 = new javax.swing.JPanel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jLabel20 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -54,9 +48,9 @@ public class TelaProdutos extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
-        jLabel153 = new javax.swing.JLabel();
+        carrinho = new javax.swing.JLabel();
         jLabel154 = new javax.swing.JLabel();
-        jLabel155 = new javax.swing.JLabel();
+        conta = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel156 = new javax.swing.JLabel();
         jLabel157 = new javax.swing.JLabel();
@@ -108,74 +102,6 @@ public class TelaProdutos extends javax.swing.JFrame {
         jPanel38 = new javax.swing.JPanel();
         jButton17 = new javax.swing.JButton();
         jLabel63 = new javax.swing.JLabel();
-
-        jPanel6.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-
-        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel18.setText("Coca Cola 2 Litros");
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cocacola (1).png"))); // NOI18N
-
-        jPanel7.setBackground(new java.awt.Color(0, 153, 51));
-
-        jButton2.setText("Adicionar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(jButton2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton2)
-                .addContainerGap(22, Short.MAX_VALUE))
-        );
-
-        jLabel20.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel20.setText("10,90R$");
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel18)))
-                .addGap(0, 38, Short.MAX_VALUE))
-            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(71, 71, 71)
-                .addComponent(jLabel20)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel18)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel20)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -292,11 +218,21 @@ public class TelaProdutos extends javax.swing.JFrame {
             }
         });
 
-        jLabel153.setText("R$ 00,00");
+        carrinho.setText("R$ 00,00");
+        carrinho.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                carrinhoMouseClicked(evt);
+            }
+        });
 
         jLabel154.setText(" 0800 200 8110 ");
 
-        jLabel155.setText("Minha Conta");
+        conta.setText("Minha Conta");
+        conta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                contaMouseClicked(evt);
+            }
+        });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/do-utilizador.png"))); // NOI18N
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -334,7 +270,7 @@ public class TelaProdutos extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel154)
                         .addGap(26, 26, 26)
-                        .addComponent(jLabel155))
+                        .addComponent(conta))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel157)
                         .addGap(69, 69, 69)
@@ -343,7 +279,7 @@ public class TelaProdutos extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(29, 29, 29)
-                        .addComponent(jLabel153, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(carrinho, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel156)
@@ -371,8 +307,8 @@ public class TelaProdutos extends javax.swing.JFrame {
                             .addComponent(jLabel157, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel155)
-                            .addComponent(jLabel153)
+                            .addComponent(conta)
+                            .addComponent(carrinho)
                             .addComponent(jLabel154))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 21, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
@@ -983,7 +919,7 @@ public class TelaProdutos extends javax.swing.JFrame {
                     .addComponent(jPanel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel37, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE))
+                    .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, 332, Short.MAX_VALUE))
                 .addGap(48, 48, 48))
         );
 
@@ -1076,44 +1012,80 @@ b.setVisible(true);
     }//GEN-LAST:event_jLabel156MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       TelaCarrinho c = new TelaCarrinho();
-       this.dispose();
-       c.setVisible(true);
+        produto.setProduto("Coca-Cola-2Litros");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("10.90"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
+     produto.setProduto("Costela-de-Porco");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("25.50"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
+    produto.setProduto("Papel-Higiênico");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("25.50"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        TelaCarrinho c = new TelaCarrinho();
-        this.dispose();
-        c.setVisible(true);
+     produto.setProduto("Banana");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("3,90"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        // TODO add your handling code here:
+        produto.setProduto("Escova-de-Dentes");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("4.0"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        produto.setProduto("Pão-Frances");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("0.70"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        // TODO add your handling code here:
+    produto.setProduto("Peito-de-Frango");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("12.20"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
+     produto.setProduto("Gold-Label-1Litro");
+        produto.setQuantidade(Integer.parseInt("1"));
+        produto.setPreco(Float.parseFloat("215.50"));
+        produto.setTotal(produto.getPreco() * produto.getQuantidade());
+        carrinhodao.adicionarAoCarrinho(produto);
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void contaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contaMouseClicked
+     TelaLogin l = new TelaLogin();
+      this.dispose();
+      l.setVisible(true);
+    }//GEN-LAST:event_contaMouseClicked
+
+    private void carrinhoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_carrinhoMouseClicked
+       TelaCarrinho c = new TelaCarrinho();
+      this.dispose();
+      c.setVisible(true);
+    }//GEN-LAST:event_carrinhoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -1152,11 +1124,12 @@ b.setVisible(true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel carrinho;
+    private javax.swing.JLabel conta;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
@@ -1168,17 +1141,13 @@ b.setVisible(true);
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel153;
     private javax.swing.JLabel jLabel154;
-    private javax.swing.JLabel jLabel155;
     private javax.swing.JLabel jLabel156;
     private javax.swing.JLabel jLabel157;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
@@ -1190,7 +1159,6 @@ b.setVisible(true);
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
@@ -1224,8 +1192,6 @@ b.setVisible(true);
     private javax.swing.JPanel jPanel38;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     // End of variables declaration//GEN-END:variables

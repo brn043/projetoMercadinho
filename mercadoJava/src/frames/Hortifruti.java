@@ -207,6 +207,11 @@ Carrinho produto = new Carrinho();
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/do-utilizador.png"))); // NOI18N
 
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/groceries (2).png"))); // NOI18N
+        jLabel21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel21MouseClicked(evt);
+            }
+        });
 
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/telefone-circular (1).png"))); // NOI18N
 
@@ -969,6 +974,12 @@ Carrinho produto = new Carrinho();
       this.dispose();
       c.setVisible(true);
     }//GEN-LAST:event_carrinhoMouseClicked
+
+    private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
+        TelaCarrinho c = new TelaCarrinho();
+      this.dispose();
+      c.setVisible(true);
+    }//GEN-LAST:event_jLabel21MouseClicked
 
     /**
      * @param args the command line arguments
